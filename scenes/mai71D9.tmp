@@ -1,18 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://w6gdjcek5161"]
+[gd_scene load_steps=5 format=3 uid="uid://w6gdjcek5161"]
 
 [ext_resource type="Texture2D" uid="uid://c804p0l5twdor" path="res://assets/visual/ui/menu_background.png" id="1_mxm8n"]
 [ext_resource type="FontFile" uid="uid://bspmm0n21y6lk" path="res://assets/visual/ui/fonts/Adventurer.ttf" id="2_wy6cq"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="2_ylufq"]
-[ext_resource type="Texture2D" uid="uid://ddj5uu5r6lqnw" path="res://godot_icon.svg" id="4_ja5mm"]
-[ext_resource type="AudioStream" uid="uid://blow1x3f6wmq3" path="res://assets/sounds/ui/click_138.wav" id="4_odfb7"]
-[ext_resource type="AudioStream" uid="uid://dxixkunu5t2vf" path="res://assets/music/exploration.ogg" id="5_c7neg"]
-[ext_resource type="PackedScene" uid="uid://b6yve7wkmw22" path="res://scenes/option_menu.tscn" id="6_2womk"]
-[ext_resource type="PackedScene" uid="uid://bxqhwycjwdq8v" path="res://scenes/codex.tscn" id="7_2ptd3"]
-[ext_resource type="PackedScene" uid="uid://b8f1jfottu5qr" path="res://scenes/choose_level.tscn" id="8_tgsc4"]
-[ext_resource type="PackedScene" uid="uid://bibmug15nxjgl" path="res://scenes/credits.tscn" id="10_4qjsi"]
+[ext_resource type="PackedScene" uid="uid://bvihsjpki8p26" path="res://scenes/how_to_play.tscn" id="4_crd21"]
 
-[node name="Menu" type="TextureRect"]
-unique_name_in_owner = true
+[node name="Node2D" type="TextureRect"]
 process_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +16,6 @@ texture = ExtResource("1_mxm8n")
 script = ExtResource("2_ylufq")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,6 +70,17 @@ theme_override_font_sizes/font_size = 30
 text = "Options"
 horizontal_alignment = 1
 
+[node name="HowToPlayLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("2_wy6cq")
+theme_override_font_sizes/font_size = 30
+text = "How to play ?"
+horizontal_alignment = 1
+
 [node name="CodexLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 0
@@ -111,24 +114,18 @@ theme_override_font_sizes/font_size = 30
 text = "Exit game"
 horizontal_alignment = 1
 
-[node name="GodotIcon" type="Sprite2D" parent="MarginContainer"]
-position = Vector2(22.75, 569.25)
-scale = Vector2(0.269531, 0.269531)
-texture = ExtResource("4_ja5mm")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_odfb7")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_c7neg")
-autoplay = true
-bus = &"Music"
-
-[node name="OptionsWindow" parent="." instance=ExtResource("6_2womk")]
+[node name="Opacifier" type="ColorRect" parent="."]
 visible = false
 layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
-[node name="Codex" parent="." instance=ExtResource("7_2ptd3")]
+[node name="HowToPlay" parent="." instance=ExtResource("4_crd21")]
 visible = false
 layout_mode = 0
 anchors_preset = 0
@@ -136,35 +133,6 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
-is_modal = true
-
-[node name="ChooseLevel" parent="." instance=ExtResource("8_tgsc4")]
-visible = false
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
-
-[node name="Credits" parent="." instance=ExtResource("10_4qjsi")]
-visible = false
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 2
-offset_left = 67.0
-offset_top = 574.0
-offset_right = 469.0
-offset_bottom = 597.0
-theme_override_fonts/font = ExtResource("2_wy6cq")
-text = "Tourtour version 1.0"
-horizontal_alignment = 2
 
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/NewGameLabel" to="." method="_on_mouse_entered"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/NewGameLabel" to="." method="select_label" binds= [0]]
@@ -172,18 +140,16 @@ horizontal_alignment = 2
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/OptionsLabel" to="." method="_on_mouse_entered"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/OptionsLabel" to="." method="select_label" binds= [1]]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/OptionsLabel" to="." method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/HowToPlayLabel" to="." method="_on_mouse_entered"]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/HowToPlayLabel" to="." method="select_label" binds= [2]]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/HowToPlayLabel" to="." method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/CodexLabel" to="." method="_on_mouse_entered"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/CodexLabel" to="." method="select_label" binds= [2]]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/CodexLabel" to="." method="select_label" binds= [3]]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/CodexLabel" to="." method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/CreditsLabel" to="." method="_on_mouse_entered"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/CreditsLabel" to="." method="select_label" binds= [3]]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/CreditsLabel" to="." method="select_label" binds= [4]]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/CreditsLabel" to="." method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/ExitGameLabel" to="." method="_on_mouse_entered"]
-[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/ExitGameLabel" to="." method="select_label" binds= [4]]
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/ExitGameLabel" to="." method="select_label" binds= [5]]
 [connection signal="mouse_exited" from="MarginContainer/VBoxContainer/ExitGameLabel" to="." method="_on_mouse_exited"]
-[connection signal="hidden" from="OptionsWindow" to="." method="transition_in"]
-[connection signal="hidden" from="Codex" to="." method="transition_in"]
-[connection signal="hidden" from="ChooseLevel" to="." method="transition_in"]
-[connection signal="level_chosen" from="ChooseLevel" to="." method="_on_level_chosen"]
-[connection signal="hidden" from="Credits" to="." method="transition_in"]
-[connection signal="visibility_changed" from="Credits" to="Credits" method="_on_visibility_changed"]
+[connection signal="visibility_changed" from="HowToPlay" to="." method="_on_how_to_play_visibility_changed"]

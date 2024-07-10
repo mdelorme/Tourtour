@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dd340jgbxcjka"]
+[gd_scene load_steps=10 format=3 uid="uid://dd340jgbxcjka"]
 
 [ext_resource type="Texture2D" uid="uid://ciqsgj81kugia" path="res://assets/visual/ui/bg_graveyard.png" id="1_62moo"]
 [ext_resource type="Script" path="res://scripts/end_game.gd" id="1_tsd0c"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c804p0l5twdor" path="res://assets/visual/ui/menu_background.png" id="6_fd24y"]
 [ext_resource type="Texture2D" uid="uid://celdn8y8e4ixl" path="res://assets/visual/ui/speedup.png" id="7_gfra2"]
 [ext_resource type="AudioStream" uid="uid://bghrxlubut6f7" path="res://assets/music/spirit_of_valley.ogg" id="8_eyljc"]
+[ext_resource type="PackedScene" uid="uid://bibmug15nxjgl" path="res://scenes/credits.tscn" id="9_k8a7f"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -160,3 +161,13 @@ texture = ExtResource("7_gfra2")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_eyljc")
 autoplay = true
+
+[node name="Credits" parent="." instance=ExtResource("9_k8a7f")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+game_finished = true
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
+[connection signal="tree_exiting" from="Credits" to="." method="_on_tree_exiting"]
+[connection signal="visibility_changed" from="Credits" to="Credits" method="_on_visibility_changed"]

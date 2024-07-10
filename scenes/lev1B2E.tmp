@@ -1,37 +1,33 @@
-[gd_scene load_steps=48 format=3 uid="uid://beqlm60f80tp8"]
+[gd_scene load_steps=45 format=3 uid="uid://beqlm60f80tp8"]
 
 [ext_resource type="Script" path="res://scripts/main_scene.gd" id="1_gywgg"]
 [ext_resource type="TileSet" uid="uid://4sbs8fk4cta6" path="res://assets/visual/tileset.tres" id="2_0sghv"]
 [ext_resource type="PackedScene" uid="uid://bjrsg0852vbv1" path="res://scenes/wave_progress_bar.tscn" id="21_eogl7"]
 [ext_resource type="Texture2D" uid="uid://ceeqb62il5o3n" path="res://assets/visual/ui/bell_button.png" id="22_eni2o"]
 [ext_resource type="Texture2D" uid="uid://bths5e0a4fc4q" path="res://assets/visual/ui/bell_button_pressed.png" id="23_jc3gh"]
-[ext_resource type="Texture2D" uid="uid://caf7bg16e2q6m" path="res://assets/visual/ui/archers_shortcut.png" id="23_wpe44"]
 [ext_resource type="Texture2D" uid="uid://cfk6wrs8k8vnt" path="res://assets/visual/ui/bell_button_disabled.png" id="24_f0km1"]
-[ext_resource type="Texture2D" uid="uid://fc0cfgg20kyf" path="res://assets/visual/ui/icons/icon_goblin.png" id="25_6q15n"]
 [ext_resource type="PackedScene" uid="uid://bgucei3o72pom" path="res://scenes/spawn.tscn" id="27_slvgi"]
 [ext_resource type="Texture2D" uid="uid://bpdo5l1yf6mgl" path="res://assets/visual/ui/heart_icon.png" id="28_hhoee"]
-[ext_resource type="Texture2D" uid="uid://c804p0l5twdor" path="res://assets/visual/ui/menu_background.png" id="29_r3niq"]
 [ext_resource type="FontFile" uid="uid://c26hvvqjcnlsi" path="res://assets/visual/ui/fonts/OldWizard.ttf" id="29_siu3v"]
-[ext_resource type="Texture2D" uid="uid://dbo5haursds6a" path="res://assets/visual/ui/cannon_shortcut.png" id="29_vrwpi"]
 [ext_resource type="Texture2D" uid="uid://batlndmprlqkv" path="res://assets/visual/ui/gold_icon.png" id="30_7iorw"]
 [ext_resource type="Script" path="res://scripts/debug_label.gd" id="31_k8gu8"]
 [ext_resource type="ButtonGroup" uid="uid://dpc14sndt0ofr" path="res://assets/visual/ui/button_group_towers.tres" id="32_thcvd"]
-[ext_resource type="PackedScene" uid="uid://dbuc4ker1no2w" path="res://scenes/tutorial.tscn" id="33_26m6u"]
 [ext_resource type="Texture2D" uid="uid://p0a1md8eipao" path="res://assets/visual/ui/archer_tower_button/archer_tower_button_normal.png" id="33_x7vap"]
 [ext_resource type="Texture2D" uid="uid://clla2f5x4ddha" path="res://assets/visual/ui/archer_tower_button/archer_tower_button_selected.png" id="34_ela4l"]
-[ext_resource type="PackedScene" uid="uid://dq6sudunmgh6q" path="res://scenes/tutorials/01_life.tscn" id="34_j3i61"]
 [ext_resource type="Texture2D" uid="uid://drf5cxlu4r5mb" path="res://assets/visual/ui/archer_tower_button/archer_tower_button_disabled.png" id="35_kkxol"]
 [ext_resource type="PackedScene" uid="uid://g88084h8hqb5" path="res://scenes/pause_menu.tscn" id="35_r0oux"]
-[ext_resource type="PackedScene" uid="uid://b6yve7wkmw22" path="res://scenes/option_menu.tscn" id="36_hl77o"]
-[ext_resource type="PackedScene" uid="uid://bxqhwycjwdq8v" path="res://scenes/codex.tscn" id="37_4ihxf"]
-[ext_resource type="Texture2D" uid="uid://dt0k6puey7wis" path="res://assets/visual/tutorials/codex.png" id="38_ed2ep"]
-[ext_resource type="AudioStream" uid="uid://y5k6lochd4e4" path="res://assets/sounds/env/Insects Loop 3.wav" id="40_e5ave"]
+[ext_resource type="Texture2D" uid="uid://ckqobsij0n6jx" path="res://assets/visual/ui/mage_tower_button/mage_tower_button_normal.png" id="36_yu4kx"]
+[ext_resource type="Texture2D" uid="uid://bu38jo4qmd2lr" path="res://assets/visual/ui/mage_tower_button/mage_tower_button_active.png" id="37_bln6v"]
+[ext_resource type="Texture2D" uid="uid://bm15gqaalf5lw" path="res://assets/visual/ui/mage_tower_button/mage_tower_button_disabled.png" id="38_tsdu5"]
+[ext_resource type="Texture2D" uid="uid://l06t3jlgoife" path="res://assets/visual/ui/druid_tower_button/druid_tower_normal.png" id="39_kx42u"]
+[ext_resource type="Texture2D" uid="uid://dulxf1eqgiw1" path="res://assets/visual/ui/druid_tower_button/druid_tower_selected.png" id="40_4aq28"]
+[ext_resource type="Texture2D" uid="uid://cjafp2xxdkmtt" path="res://assets/visual/ui/druid_tower_button/druid_tower_disabled.png" id="41_atv4i"]
 [ext_resource type="Texture2D" uid="uid://boi7pvhr6n0br" path="res://assets/visual/ui/cannon_tower_button/cannon_tower_button_normal.png" id="42_dx2ig"]
-[ext_resource type="AudioStream" uid="uid://d0h0mqy43o0p8" path="res://assets/music/harvestseason.ogg" id="42_tmpkn"]
 [ext_resource type="Texture2D" uid="uid://dr48d7h8hxk1x" path="res://assets/visual/ui/cannon_tower_button/cannon_tower_button_selected.png" id="43_3mxq3"]
 [ext_resource type="Texture2D" uid="uid://dm1267t0sp43c" path="res://assets/visual/ui/cannon_tower_button/cannon_tower_button_disabled.png" id="44_vmny0"]
 [ext_resource type="Texture2D" uid="uid://c2g61krdljcrm" path="res://assets/visual/archer_tower.png" id="45_gwru7"]
 [ext_resource type="Script" path="res://scripts/sound_manager.gd" id="45_s6d4g"]
+[ext_resource type="AudioStream" uid="uid://dyo6or5jao5o" path="res://assets/sounds/ui/click_003.ogg" id="46_16g41"]
 [ext_resource type="Texture2D" uid="uid://pak8ecw4cwup" path="res://assets/visual/ui/fire_rate_icon.png" id="46_ansd0"]
 [ext_resource type="Texture2D" uid="uid://dqyihtxr0ugwy" path="res://assets/visual/ui/damage_icon.png" id="47_667mb"]
 [ext_resource type="Texture2D" uid="uid://bi045jsf4jxsy" path="res://assets/visual/mage_tower.png" id="48_srsdx"]
@@ -42,6 +38,8 @@
 [ext_resource type="Texture2D" uid="uid://dh5wsywnl3sjw" path="res://assets/visual/ui/slide_in.png" id="53_b05hj"]
 [ext_resource type="Script" path="res://scripts/title_displayer.gd" id="53_tnpvp"]
 [ext_resource type="FontFile" uid="uid://bspmm0n21y6lk" path="res://assets/visual/ui/fonts/Adventurer.ttf" id="54_cyp0j"]
+[ext_resource type="AudioStream" uid="uid://pkhl5stsaj8g" path="res://assets/sounds/enemies/spawning.wav" id="55_cw2sp"]
+[ext_resource type="AudioStream" uid="uid://bpx634pk2iol" path="res://assets/music/Woodland Fantasy.mp3" id="56_noc7e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irxl4"]
 bg_color = Color(0, 0, 0, 0.823529)
@@ -95,21 +93,11 @@ corner_radius_bottom_left = 10
 shadow_size = 2
 shadow_offset = Vector2(1, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n7hbd"]
-bg_color = Color(0, 0, 0, 0.87451)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
 [node name="Game" type="Node2D"]
 script = ExtResource("1_gywgg")
 next_level = "res://scenes/level2.tscn"
 archer_tower_enabled = true
 cannon_tower_enabled = true
-cur_level = 1
-starting_gold = 200
-starting_life = 10
 
 [node name="MainScene" type="Node2D" parent="."]
 position = Vector2(0, 32)
@@ -130,7 +118,6 @@ position = Vector2(233, 457)
 points = PackedVector2Array(0, 0, 0, -66, -48, -66, -48, -81, -161, -81, -161, -97, -177, -97, -177, -145, -161, -145, -161, -175, -146, -175, -146, -193, -17, -193, -17, -209, -1, -209, -1, -304, -145, -304, -145, -353, 47, -353, 47, -304, 95, -304, 95, -402, -136, -402)
 
 [node name="Spawn" parent="MainScene" instance=ExtResource("27_slvgi")]
-unique_name_in_owner = true
 z_index = 10
 position = Vector2(232, 457)
 wave_description = "res://waves/lvl1.txt"
@@ -138,10 +125,6 @@ wave_description = "res://waves/lvl1.txt"
 [node name="EnemyList" type="Node2D" parent="MainScene"]
 
 [node name="Towers" type="Node2D" parent="MainScene"]
-
-[node name="GigaExplosionTimer" type="Timer" parent="MainScene"]
-unique_name_in_owner = true
-wait_time = 0.01
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -226,7 +209,6 @@ script = ExtResource("31_k8gu8")
 
 [node name="ArcherTowerButton" type="TextureButton" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-focus_mode = 0
 toggle_mode = true
 action_mode = 0
 button_group = ExtResource("32_thcvd")
@@ -234,26 +216,32 @@ texture_normal = ExtResource("33_x7vap")
 texture_pressed = ExtResource("34_ela4l")
 texture_disabled = ExtResource("35_kkxol")
 
+[node name="MageTowerButton" type="TextureButton" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("32_thcvd")
+texture_normal = ExtResource("36_yu4kx")
+texture_pressed = ExtResource("37_bln6v")
+texture_disabled = ExtResource("38_tsdu5")
+
+[node name="DruidTowerButton" type="TextureButton" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("32_thcvd")
+texture_normal = ExtResource("39_kx42u")
+texture_pressed = ExtResource("40_4aq28")
+texture_disabled = ExtResource("41_atv4i")
+
 [node name="CannonTowerButton" type="TextureButton" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-focus_mode = 0
 toggle_mode = true
 action_mode = 0
 button_group = ExtResource("32_thcvd")
 texture_normal = ExtResource("42_dx2ig")
 texture_pressed = ExtResource("43_3mxq3")
 texture_disabled = ExtResource("44_vmny0")
-
-[node name="Control2" type="Control" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(260, 0)
-layout_mode = 2
-
-[node name="CallWaveButton" type="TextureButton" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-texture_normal = ExtResource("22_eni2o")
-texture_pressed = ExtResource("23_jc3gh")
-texture_disabled = ExtResource("24_f0km1")
 
 [node name="Panel" type="Panel" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer"]
 modulate = Color(0.776471, 0.776471, 0.776471, 1)
@@ -279,18 +267,11 @@ vertical_alignment = 1
 layout_mode = 2
 step = 0.0
 
-[node name="NextWaveLabel" type="Label" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
+[node name="CallWaveButton" type="TextureButton" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("29_siu3v")
-theme_override_font_sizes/font_size = 22
-text = "Next"
-vertical_alignment = 1
-
-[node name="NextWaveIndicator" type="TextureRect" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
-unique_name_in_owner = true
-layout_mode = 2
-texture = ExtResource("25_6q15n")
+texture_normal = ExtResource("22_eni2o")
+texture_pressed = ExtResource("23_jc3gh")
+texture_disabled = ExtResource("24_f0km1")
 
 [node name="ArchersDescriptionPanel" type="Panel" parent="CanvasLayer"]
 visible = false
@@ -383,11 +364,6 @@ texture = ExtResource("47_667mb")
 layout_mode = 2
 theme_override_fonts/font = ExtResource("29_siu3v")
 text = "10"
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ArchersDescriptionPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("23_wpe44")
-stretch_mode = 3
 
 [node name="MagesDescriptionPanel" type="Panel" parent="CanvasLayer"]
 visible = false
@@ -697,43 +673,6 @@ theme_override_fonts/font = ExtResource("29_siu3v")
 text = "Area dmg"
 vertical_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/CannonsDescriptionPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("29_vrwpi")
-stretch_mode = 3
-
-[node name="CallNextWaveDescriptionPanel" type="Panel" parent="CanvasLayer"]
-visible = false
-offset_left = 319.0
-offset_top = 516.0
-offset_right = 459.0
-offset_bottom = 556.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_irxl4")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/CallNextWaveDescriptionPanel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 5
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer/CallNextWaveDescriptionPanel/MarginContainer"]
-custom_minimum_size = Vector2(55, 0)
-layout_mode = 2
-theme_override_fonts/normal_font = ExtResource("29_siu3v")
-bbcode_enabled = true
-text = "[center]Call next wave
-[color='#aaaaff']<spacebar>[/color]
-[/center]"
-scroll_active = false
-autowrap_mode = 0
-text_direction = 1
-
 [node name="NotificationBox" type="VBoxContainer" parent="CanvasLayer"]
 offset_left = 233.0
 offset_top = 35.0
@@ -741,27 +680,11 @@ offset_right = 478.0
 offset_bottom = 240.0
 
 [node name="TitleDisplayer" type="Control" parent="CanvasLayer"]
-unique_name_in_owner = true
-process_mode = 3
-z_index = 4096
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("53_tnpvp")
-
-[node name="FadeOutBackground" type="TextureRect" parent="CanvasLayer/TitleDisplayer"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("29_r3niq")
 
 [node name="SlideInBackground" type="TextureRect" parent="CanvasLayer/TitleDisplayer"]
 modulate = Color(1, 1, 1, 0.878431)
@@ -799,21 +722,7 @@ color = Color(0, 0, 0, 1)
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("35_r0oux")]
 visible = false
 
-[node name="Codex" parent="CanvasLayer/PauseMenu" instance=ExtResource("37_4ihxf")]
-visible = false
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-grow_horizontal = 1
-grow_vertical = 1
-
-[node name="OptionsWindow" parent="CanvasLayer/PauseMenu" instance=ExtResource("36_hl77o")]
-visible = false
-layout_mode = 1
-
 [node name="VictoryPanel" type="ColorRect" parent="CanvasLayer"]
-process_mode = 3
 offset_top = -227.0
 offset_right = 480.0
 color = Color(0, 0, 0, 0.835294)
@@ -848,8 +757,7 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 20
-text = "The green dragon is free and 
-the dark army has been defeated ! 
+text = "The dark army has been defeated ! 
 But the land is not safe yet !"
 horizontal_alignment = 1
 
@@ -870,703 +778,37 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_f00u1")
 text = "Go to the woods
 "
 
-[node name="DebugPanel" type="PanelContainer" parent="CanvasLayer"]
-visible = false
-offset_left = 305.0
-offset_top = 12.0
-offset_right = 479.0
-offset_bottom = 182.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_n7hbd")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/DebugPanel"]
-layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 10
-
-[node name="VboxContainer" type="VBoxContainer" parent="CanvasLayer/DebugPanel/MarginContainer"]
-layout_mode = 2
-
-[node name="Title" type="Label" parent="CanvasLayer/DebugPanel/MarginContainer/VboxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 13
-text = "Debug"
-horizontal_alignment = 1
-
-[node name="CurrentWave" type="Label" parent="CanvasLayer/DebugPanel/MarginContainer/VboxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 14
-text = "Current wave: "
-
-[node name="EnemiesLeft" type="Label" parent="CanvasLayer/DebugPanel/MarginContainer/VboxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 14
-text = "Enemies Left: "
-
-[node name="CurrentEnemy" type="Label" parent="CanvasLayer/DebugPanel/MarginContainer/VboxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 14
-text = "Current enemy: "
-
-[node name="Tutorials" type="Control" parent="CanvasLayer"]
-unique_name_in_owner = true
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="00_init" parent="CanvasLayer/Tutorials" instance=ExtResource("33_26m6u")]
-visible = false
-z_as_relative = false
-layout_mode = 1
-offset_left = 62.0
-offset_top = 89.0
-offset_right = 402.0
-offset_bottom = 270.0
-unique_id = "00_init"
-
-[node name="Button" parent="CanvasLayer/Tutorials/00_init" index="0"]
-offset_left = 340.0
-offset_top = 182.0
-offset_right = 371.0
-offset_bottom = 213.0
-
-[node name="CheckBox" parent="CanvasLayer/Tutorials/00_init" index="1"]
-offset_left = 7.0
-offset_top = 191.0
-offset_right = 251.0
-offset_bottom = 215.0
-
-[node name="Label" type="Label" parent="CanvasLayer/Tutorials/00_init"]
-layout_mode = 0
-offset_left = 79.0
-offset_top = 15.0
-offset_right = 297.0
-offset_bottom = 38.0
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "Welcome to Tourtour !"
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Tutorials/00_init"]
-layout_mode = 0
-offset_left = 19.0
-offset_top = 49.0
-offset_right = 363.0
-offset_bottom = 181.0
-theme_override_fonts/normal_font = ExtResource("54_cyp0j")
-theme_override_font_sizes/normal_font_size = 22
-text = "The kingdom is attacked ! The only way to save your loved ones is to build towers to kill the hordes of enemies !
-
-Click Ok to continue"
-
-[node name="01_portal" parent="CanvasLayer/Tutorials" instance=ExtResource("33_26m6u")]
-visible = false
-z_as_relative = false
-layout_mode = 1
-offset_left = 62.0
-offset_top = 89.0
-offset_right = 402.0
-offset_bottom = 227.0
-unique_id = "01_portal"
-
-[node name="Button" parent="CanvasLayer/Tutorials/01_portal" index="0"]
-offset_left = 337.0
-offset_top = 139.0
-offset_right = 368.0
-offset_bottom = 170.0
-
-[node name="CheckBox" parent="CanvasLayer/Tutorials/01_portal" index="1"]
-offset_left = 8.0
-offset_top = 145.0
-offset_right = 252.0
-offset_bottom = 169.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Tutorials/01_portal"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 18.0
-offset_right = 362.0
-offset_bottom = 130.0
-theme_override_fonts/normal_font = ExtResource("54_cyp0j")
-theme_override_font_sizes/normal_font_size = 22
-text = "Enemies attacking you will be spawning from this portal. They will follow the path and try to attack your castle. You have to stop them before they reach you !"
-
-[node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/01_portal"]
-points = PackedVector2Array(171, 397, 187, 175)
-width = 4.0
-default_color = Color(0.976471, 0.886275, 0.513726, 1)
-joint_mode = 2
-begin_cap_mode = 2
-
-[node name="02_life" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
-visible = false
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 24.0
-offset_top = 125.0
-offset_right = 439.0
-offset_bottom = 277.0
-grow_horizontal = 1
-grow_vertical = 1
-unique_id = "02_life"
-
-[node name="Button" parent="CanvasLayer/Tutorials/02_life" index="0"]
-offset_left = 374.0
-offset_top = 112.0
-offset_right = 405.0
-offset_bottom = 143.0
-
-[node name="CheckBox" parent="CanvasLayer/Tutorials/02_life" index="1"]
-offset_left = 8.0
-offset_top = 122.0
-offset_right = 252.0
-offset_bottom = 146.0
-
-[node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/02_life"]
-points = PackedVector2Array(21, -98, 116, 2)
-width = 4.0
-default_color = Color(0.976471, 0.886275, 0.513726, 1)
-begin_cap_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/Tutorials/02_life"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 11.0
-offset_right = 405.0
-offset_bottom = 110.0
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "This is your life, it drops by one every
-time an enemy passes through your defenses. If it drops to zero, you lose the game !"
-autowrap_mode = 2
-
-[node name="03_money" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
-visible = false
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 24.0
-offset_top = 125.0
-offset_right = 439.0
-offset_bottom = 251.0
-grow_horizontal = 1
-grow_vertical = 1
-unique_id = "03_money"
-
-[node name="Button" parent="CanvasLayer/Tutorials/03_money" index="0"]
-offset_left = 375.0
-offset_top = 84.0
-offset_right = 406.0
-offset_bottom = 115.0
-
-[node name="CheckBox" parent="CanvasLayer/Tutorials/03_money" index="1"]
-offset_left = 7.0
-offset_top = 96.0
-offset_right = 251.0
-offset_bottom = 120.0
-
-[node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/03_money"]
-points = PackedVector2Array(93, -97, 116, 2)
-width = 4.0
-default_color = Color(0.976471, 0.886275, 0.513726, 1)
-joint_mode = 2
-begin_cap_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/Tutorials/03_money"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 11.0
-offset_right = 405.0
-offset_bottom = 86.0
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "This is your money. You gain money by killing enemies. You spend money by building towers."
-autowrap_mode = 2
-
-[node name="04_archers" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
-visible = false
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 30.0
-offset_top = 120.0
-offset_right = 445.0
-offset_bottom = 480.0
-grow_horizontal = 1
-grow_vertical = 1
-unique_id = "04_archers"
-
-[node name="Button" parent="CanvasLayer/Tutorials/04_archers" index="0"]
-offset_left = 374.0
-offset_top = 320.0
-offset_right = 405.0
-offset_bottom = 351.0
-
-[node name="CheckBox" parent="CanvasLayer/Tutorials/04_archers" index="1"]
-offset_left = 7.0
-offset_top = 327.0
-offset_right = 251.0
-offset_bottom = 351.0
-
-[node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/04_archers"]
-position = Vector2(68, 222)
-points = PackedVector2Array(54, 136, 8, 177)
-width = 4.0
-default_color = Color(0.976471, 0.886275, 0.513726, 1)
-joint_mode = 2
-end_cap_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/Tutorials/04_archers"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 11.0
-offset_right = 405.0
-offset_bottom = 86.0
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "Click on this button to build an archer tower. 
-
-Towers can be placed on any free space on the map. Their firing range is shown as an outline.
-
-Archer towers fire arrows that deal a substantial amount of damage to a single target.
-
-Archer towers cost 100 gold coins"
-autowrap_mode = 2
-
-[node name="05_cannons" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
-visible = false
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 39.0
-offset_top = 144.0
-offset_right = 454.0
-offset_bottom = 444.0
-grow_horizontal = 1
-grow_vertical = 1
-unique_id = "05_cannons"
-
-[node name="Button" parent="CanvasLayer/Tutorials/05_cannons" index="0"]
-offset_left = 373.0
-offset_top = 261.0
-offset_right = 404.0
-offset_bottom = 292.0
-
-[node name="CheckBox" parent="CanvasLayer/Tutorials/05_cannons" index="1"]
-offset_left = 9.0
-offset_top = 268.0
-offset_right = 253.0
-offset_bottom = 292.0
-
-[node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/05_cannons"]
-position = Vector2(68, 222)
-points = PackedVector2Array(115, 76, 50, 150)
-width = 4.0
-default_color = Color(0.976471, 0.886275, 0.513726, 1)
-joint_mode = 2
-end_cap_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/Tutorials/05_cannons"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 11.0
-offset_right = 405.0
-offset_bottom = 86.0
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "This button allows you to build cannon towers. You cannot use it yet, because cannon towers cost 300 gold coins.
-
-Their firing rate is much smaller than that of the archers. However, their range is increased and they deal a large amount of damage in an area of effect. These towers are perfect to tackle large groups of enemies."
-autowrap_mode = 2
-
-[node name="06_progress_wave" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
-visible = false
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 39.0
-offset_top = 229.0
-offset_right = 454.0
-offset_bottom = 444.0
-grow_horizontal = 1
-grow_vertical = 1
-unique_id = "06_progress_wave"
-
-[node name="Button" parent="CanvasLayer/Tutorials/06_progress_wave" index="0"]
-offset_left = 374.0
-offset_top = 176.0
-offset_right = 405.0
-offset_bottom = 207.0
-
-[node name="CheckBox" parent="CanvasLayer/Tutorials/06_progress_wave" index="1"]
-offset_left = 10.0
-offset_top = 183.0
-offset_right = 254.0
-offset_bottom = 207.0
-
-[node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/06_progress_wave"]
-position = Vector2(123, 136)
-points = PackedVector2Array(115, 76, 79, 197)
-width = 4.0
-default_color = Color(0.976471, 0.886275, 0.513726, 1)
-joint_mode = 2
-end_cap_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/Tutorials/06_progress_wave"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 11.0
-offset_right = 405.0
-offset_bottom = 86.0
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "This is the progress bar. 
-
-It shows you the time left before the next wave (when orange) and the time left before the end of the wave (when blue)."
-autowrap_mode = 2
-
-[node name="07_skip_wave" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
-visible = false
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 39.0
-offset_top = 280.0
-offset_right = 454.0
-offset_bottom = 444.0
-grow_horizontal = 1
-grow_vertical = 1
-unique_id = "07_skip_wave"
-
-[node name="Button" parent="CanvasLayer/Tutorials/07_skip_wave" index="0"]
-offset_left = 375.0
-offset_top = 123.0
-offset_right = 406.0
-offset_bottom = 154.0
-
-[node name="CheckBox" parent="CanvasLayer/Tutorials/07_skip_wave" index="1"]
-offset_left = 11.0
-offset_top = 128.0
-offset_right = 255.0
-offset_bottom = 152.0
-
-[node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/07_skip_wave"]
-position = Vector2(236, 86)
-points = PackedVector2Array(115, 76, 174, 155)
-width = 4.0
-default_color = Color(0.976471, 0.886275, 0.513726, 1)
-joint_mode = 2
-end_cap_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/Tutorials/07_skip_wave"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 11.0
-offset_right = 405.0
-offset_bottom = 86.0
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "When you feel you are ready to start the next wave instead of waiting, you can click that button to start the wave immediately."
-autowrap_mode = 2
-
-[node name="08_next_wave" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
-visible = false
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 39.0
-offset_top = 313.0
-offset_right = 454.0
-offset_bottom = 444.0
-grow_horizontal = 1
-grow_vertical = 1
-unique_id = "08_next_wave"
-
-[node name="Button" parent="CanvasLayer/Tutorials/08_next_wave" index="0"]
-offset_left = 374.0
-offset_top = 96.0
-offset_right = 405.0
-offset_bottom = 127.0
-
-[node name="CheckBox" parent="CanvasLayer/Tutorials/08_next_wave" index="1"]
-offset_left = 11.0
-offset_top = 96.0
-offset_right = 255.0
-offset_bottom = 120.0
-
-[node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/08_next_wave"]
-position = Vector2(243, 55)
-points = PackedVector2Array(115, 74, 152, 189)
-width = 4.0
-default_color = Color(0.976471, 0.886275, 0.513726, 1)
-joint_mode = 2
-end_cap_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/Tutorials/08_next_wave"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 11.0
-offset_right = 405.0
-offset_bottom = 86.0
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "This icon shows you the type of enemy that will be coming out of the portal during the next wave."
-autowrap_mode = 2
-
-[node name="09_goblins" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
-visible = false
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 33.0
-offset_top = 199.0
-offset_right = 448.0
-offset_bottom = 360.0
-grow_horizontal = 1
-grow_vertical = 1
-trigger_type = 1
-encounter_name = "Goblin"
-unique_id = "09_goblins"
-
-[node name="Button" parent="CanvasLayer/Tutorials/09_goblins" index="0"]
-offset_left = 372.0
-offset_top = 119.0
-offset_right = 403.0
-offset_bottom = 150.0
-
-[node name="CheckBox" parent="CanvasLayer/Tutorials/09_goblins" index="1"]
-offset_left = 7.0
-offset_top = 130.0
-offset_right = 251.0
-offset_bottom = 154.0
-
-[node name="Label" type="Label" parent="CanvasLayer/Tutorials/09_goblins"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 11.0
-offset_right = 405.0
-offset_bottom = 86.0
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "Your first enemy is a goblin. It is quite fast but does not have a lot of life. Building an archer tower should be more than sufficient to kill them."
-autowrap_mode = 2
-
-[node name="10_orcs" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
-visible = false
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 33.0
-offset_top = 199.0
-offset_right = 448.0
-offset_bottom = 329.0
-grow_horizontal = 1
-grow_vertical = 1
-trigger_type = 1
-encounter_name = "Orc"
-unique_id = "10_orcs"
-
-[node name="Button" parent="CanvasLayer/Tutorials/10_orcs" index="0"]
-offset_left = 374.0
-offset_top = 90.0
-offset_right = 405.0
-offset_bottom = 121.0
-
-[node name="CheckBox" parent="CanvasLayer/Tutorials/10_orcs" index="1"]
-offset_left = 12.0
-offset_top = 97.0
-offset_right = 256.0
-offset_bottom = 121.0
-
-[node name="Label" type="Label" parent="CanvasLayer/Tutorials/10_orcs"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 11.0
-offset_right = 405.0
-offset_bottom = 86.0
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "You've met the orcs. Orcs are more resilient than goblins, but also a little bit slower !"
-autowrap_mode = 2
-
-[node name="11_orc_shaman" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
-visible = false
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 30.0
-offset_top = 47.0
-offset_right = 445.0
-offset_bottom = 491.0
-grow_horizontal = 1
-grow_vertical = 1
-trigger_type = 1
-encounter_name = "Orc Shaman"
-unique_id = "11_orc_shaman"
-
-[node name="Button" parent="CanvasLayer/Tutorials/11_orc_shaman" index="0"]
-offset_left = 369.0
-offset_top = 403.0
-offset_right = 400.0
-offset_bottom = 434.0
-
-[node name="CheckBox" parent="CanvasLayer/Tutorials/11_orc_shaman" index="1"]
-offset_left = 12.0
-offset_top = 410.0
-offset_right = 256.0
-offset_bottom = 434.0
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Tutorials/11_orc_shaman"]
-layout_mode = 0
-offset_left = 191.0
-offset_top = 159.0
-offset_right = 402.0
-offset_bottom = 358.0
-texture = ExtResource("38_ed2ep")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="Label" type="Label" parent="CanvasLayer/Tutorials/11_orc_shaman"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 11.0
-offset_right = 405.0
-offset_bottom = 86.0
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "Some enemies like have special properties. The challenge of Tourtour is to understand your enemies to plan which tower will be the most effective. 
-"
-autowrap_mode = 2
-
-[node name="Label2" type="Label" parent="CanvasLayer/Tutorials/11_orc_shaman"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 127.0
-offset_right = 199.0
-offset_bottom = 399.0
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "To review the properties and special skills of each enemy, press <esc> and find the Codex. Here you can review each enemy in detail while the game is paused."
-autowrap_mode = 2
-
-[node name="12_green_dragon" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
-visible = false
-custom_minimum_size = Vector2(0, 0)
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 30.0
-offset_top = 136.0
-offset_right = 445.0
-offset_bottom = 449.0
-grow_horizontal = 1
-grow_vertical = 1
-trigger_type = 1
-encounter_name = "Green Dragon"
-unique_id = "12_green_dragon"
-
-[node name="Button" parent="CanvasLayer/Tutorials/12_green_dragon" index="0"]
-offset_left = 375.0
-offset_top = 271.0
-offset_right = 406.0
-offset_bottom = 302.0
-
-[node name="CheckBox" parent="CanvasLayer/Tutorials/12_green_dragon" index="1"]
-offset_left = 9.0
-offset_top = 281.0
-offset_right = 253.0
-offset_bottom = 305.0
-
-[node name="Label" type="Label" parent="CanvasLayer/Tutorials/12_green_dragon"]
-layout_mode = 0
-offset_left = 16.0
-offset_top = 11.0
-offset_right = 405.0
-offset_bottom = 86.0
-theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "You are about to meet your first boss !
-
-The green dragon was once the protector of the land. He is now possessed, and the only way to free him, is to fill him with arrows and cannon balls.
-
-Good luck !"
-autowrap_mode = 2
-
 [node name="SoundManager" type="Node" parent="."]
-unique_name_in_owner = true
 script = ExtResource("45_s6d4g")
 
-[node name="EnvStream" type="AudioStreamPlayer" parent="SoundManager"]
-stream = ExtResource("40_e5ave")
-autoplay = true
-bus = &"Environment"
+[node name="ClickSound" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("46_16g41")
+bus = &"UI"
+
+[node name="SpawnSound" type="AudioStreamPlayer" parent="SoundManager"]
+stream = ExtResource("55_cw2sp")
 
 [node name="MusicManager" type="Node" parent="."]
 
 [node name="LevelMusic" type="AudioStreamPlayer" parent="MusicManager"]
-unique_name_in_owner = true
-process_mode = 3
-stream = ExtResource("42_tmpkn")
+stream = ExtResource("56_noc7e")
 autoplay = true
-bus = &"Music"
 
 [connection signal="spawn_enemy" from="MainScene/Spawn" to="." method="spawn_enemy"]
 [connection signal="wait_for_end" from="MainScene/Spawn" to="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2/WaveProgressBar" method="wait_for_end"]
 [connection signal="wait_progress" from="MainScene/Spawn" to="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2/WaveProgressBar" method="wait_for_wave"]
 [connection signal="wave_progress" from="MainScene/Spawn" to="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2/WaveProgressBar" method="wave_progress"]
-[connection signal="timeout" from="MainScene/GigaExplosionTimer" to="." method="giga_explosion"]
 [connection signal="mouse_entered" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/ArcherTowerButton" to="CanvasLayer/ArchersDescriptionPanel" method="set_visible" binds= [true]]
 [connection signal="mouse_exited" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/ArcherTowerButton" to="CanvasLayer/ArchersDescriptionPanel" method="set_visible" binds= [false]]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/ArcherTowerButton" to="." method="select_tower" binds= [0]]
+[connection signal="mouse_entered" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/MageTowerButton" to="CanvasLayer/MagesDescriptionPanel" method="set_visible" binds= [true]]
+[connection signal="mouse_exited" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/MageTowerButton" to="CanvasLayer/MagesDescriptionPanel" method="set_visible" binds= [false]]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/MageTowerButton" to="." method="select_tower" binds= [1]]
+[connection signal="mouse_entered" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/DruidTowerButton" to="CanvasLayer/DruidsDescriptionPanel" method="set_visible" binds= [true]]
+[connection signal="mouse_exited" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/DruidTowerButton" to="CanvasLayer/DruidsDescriptionPanel" method="set_visible" binds= [false]]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/DruidTowerButton" to="." method="select_tower" binds= [2]]
 [connection signal="mouse_entered" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/CannonTowerButton" to="CanvasLayer/CannonsDescriptionPanel" method="set_visible" binds= [true]]
 [connection signal="mouse_exited" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/CannonTowerButton" to="CanvasLayer/CannonsDescriptionPanel" method="set_visible" binds= [false]]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/CannonTowerButton" to="." method="select_tower" binds= [3]]
-[connection signal="pressed" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/CallWaveButton" to="MainScene/Spawn" method="_on_skip_waiting"]
-[connection signal="visibility_changed" from="CanvasLayer/PauseMenu" to="." method="_on_pause_menu_visibility_changed"]
-[connection signal="visibility_changed" from="CanvasLayer/PauseMenu/Codex" to="CanvasLayer/PauseMenu" method="_on_codex_visibility_changed"]
-[connection signal="visibility_changed" from="CanvasLayer/PauseMenu/OptionsWindow" to="CanvasLayer/PauseMenu/OptionsWindow" method="_on_visibility_changed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2/CallWaveButton" to="MainScene/Spawn" method="_on_skip_waiting"]
 [connection signal="pressed" from="CanvasLayer/VictoryPanel/MarginContainer/VBoxContainer/HBoxContainer/NextLevel" to="." method="_on_next_level_pressed"]
-
-[editable path="CanvasLayer/Tutorials/00_init"]
-[editable path="CanvasLayer/Tutorials/01_portal"]
-[editable path="CanvasLayer/Tutorials/02_life"]
-[editable path="CanvasLayer/Tutorials/03_money"]
-[editable path="CanvasLayer/Tutorials/04_archers"]
-[editable path="CanvasLayer/Tutorials/05_cannons"]
-[editable path="CanvasLayer/Tutorials/06_progress_wave"]
-[editable path="CanvasLayer/Tutorials/07_skip_wave"]
-[editable path="CanvasLayer/Tutorials/08_next_wave"]
-[editable path="CanvasLayer/Tutorials/09_goblins"]
-[editable path="CanvasLayer/Tutorials/10_orcs"]
-[editable path="CanvasLayer/Tutorials/11_orc_shaman"]
-[editable path="CanvasLayer/Tutorials/12_green_dragon"]

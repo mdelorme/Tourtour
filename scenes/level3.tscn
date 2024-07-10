@@ -711,7 +711,7 @@ position = Vector2(167, 265)
 line_point = 4
 
 [node name="Line" parent="MainScene/Burrows/Burrow" index="0"]
-modulate = Color(0.999789, 0.5, 0.5, 1)
+modulate = Color(0.883798, 0.5, 0.5, 1)
 points = PackedVector2Array(0, 0, 0, -145)
 
 [node name="Exit" parent="MainScene/Burrows/Burrow" index="2"]
