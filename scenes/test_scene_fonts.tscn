@@ -1,0 +1,154 @@
+[gd_scene load_steps=2 format=3 uid="uid://bskwowu48ti6q"]
+
+[ext_resource type="FontFile" uid="uid://bspmm0n21y6lk" path="res://assets/visual/ui/fonts/Adventurer.ttf" id="1_xj8bm"]
+
+[node name="Node2D" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 12
+text = "12 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 13
+text = "13 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 14
+text = "14 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 15
+text = "15 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 16
+text = "16 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 17
+text = "17 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 18
+text = "18 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label8" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 19
+text = "19 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 20
+text = "20 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 21
+text = "21 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label11" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 22
+text = "22 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label12" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 23
+text = "23 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label13" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 24
+text = "24 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label14" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 25
+text = "25 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label15" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 26
+text = "26 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label16" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 27
+text = "27 Testing text aliasing and such"
+horizontal_alignment = 1
+
+[node name="Label17" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_xj8bm")
+theme_override_font_sizes/font_size = 28
+text = "28 Testing text aliasing and such"
+horizontal_alignment = 1

@@ -1,0 +1,17 @@
+Level 2 - The Woods
+300.0
+orc 13 3.0 20
+wendigo 1 5.0 20
+orc 15 1.5 20
+wendigo 5 3.6 10
+red_demon 7 1.25 10
+red_demon 15 0.1 20
+minotaur 1 1.0 20
+wendigo 8 1.7 20
+red_demon 40 0.05 15
+minotaur 3 2.25 5
+red_demon 70 0.1 5
+wendigo 15 0.5 20
+minotaur 5 0.75 10
+red_demon 60 0.1 40
+red_dragon 1 1.0 200000

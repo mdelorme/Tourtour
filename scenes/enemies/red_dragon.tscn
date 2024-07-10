@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://fwbpov3l7vqh"]
+
+[ext_resource type="PackedScene" uid="uid://dgc6daev737xv" path="res://scenes/enemy.tscn" id="1_wevbr"]
+[ext_resource type="Texture2D" uid="uid://qrsepasbeiu8" path="res://assets/visual/ui/icons/icon_red_dragon.png" id="2_2vh3v"]
+[ext_resource type="SpriteFrames" uid="uid://uoy1vphk2156" path="res://assets/visual/SpriteFrames/red_dragon.tres" id="3_6tbww"]
+[ext_resource type="Texture2D" uid="uid://c1nlso4fdxguc" path="res://assets/visual/pixel_exploding_skull.png" id="4_vyryu"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yn6kg"]
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.1
+scale_max = 0.5
+
+[node name="Enemy" instance=ExtResource("1_wevbr")]
+icon = ExtResource("2_2vh3v")
+monster_name = "Red Dragon"
+life = 250000
+speed = 20.0
+frames = ExtResource("3_6tbww")
+is_boss = true
+can_scream = true
+dying_sound = 12
+
+[node name="AnimatedSprite" parent="." index="0"]
+sprite_frames = ExtResource("3_6tbww")
+animation = &"default"
+
+[node name="Particles" type="Node2D" parent="." index="6"]
+visible = false
+
+[node name="BlueParticles" type="CPUParticles2D" parent="Particles" index="0"]
+amount = 200
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 80.0
+scale_amount_max = 3.0
+color = Color(0.501961, 0.870588, 1, 1)
+hue_variation_min = -0.82
+hue_variation_max = 0.71
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Particles" index="1"]
+modulate = Color(1, 1, 1, 0.635294)
+amount = 50
+process_material = SubResource("ParticleProcessMaterial_yn6kg")
+texture = ExtResource("4_vyryu")
+
+[node name="BossDeathTimer" type="Timer" parent="." index="7"]
+unique_name_in_owner = true
+process_callback = 0
+wait_time = 10.0
+one_shot = true
+
+[connection signal="timeout" from="BossDeathTimer" to="." method="_on_boss_death"]

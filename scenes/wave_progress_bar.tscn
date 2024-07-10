@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjrsg0852vbv1"]
+
+[ext_resource type="Texture2D" uid="uid://c45vv7hnrk7be" path="res://assets/visual/ui/progress_bar_under.png" id="1_g6ule"]
+[ext_resource type="Texture2D" uid="uid://dw1752jyx4tyy" path="res://assets/visual/ui/progress_bar_over.png" id="2_l2gyl"]
+[ext_resource type="Texture2D" uid="uid://cfhw6yft813uf" path="res://assets/visual/ui/progress_bar_fill_orange.png" id="3_hrls7"]
+[ext_resource type="Script" path="res://scripts/wave_progress_bar.gd" id="4_kum6d"]
+[ext_resource type="FontFile" uid="uid://bspmm0n21y6lk" path="res://assets/visual/ui/fonts/Adventurer.ttf" id="5_vkdx1"]
+
+[node name="WaveProgressBar" type="TextureProgressBar"]
+size_flags_vertical = 4
+value = 10.0
+texture_under = ExtResource("1_g6ule")
+texture_over = ExtResource("2_l2gyl")
+texture_progress = ExtResource("3_hrls7")
+script = ExtResource("4_kum6d")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.788235, 0.788235, 0.788235, 1)
+theme_override_fonts/font = ExtResource("5_vkdx1")
+text = "next wave in "
+horizontal_alignment = 1

@@ -1,0 +1,634 @@
+[gd_scene load_steps=33 format=3 uid="uid://udkfhkwqur1o"]
+
+[ext_resource type="Texture2D" uid="uid://bpdo5l1yf6mgl" path="res://assets/visual/ui/heart_icon.png" id="1_pt3y5"]
+[ext_resource type="FontFile" uid="uid://c26hvvqjcnlsi" path="res://assets/visual/ui/fonts/OldWizard.ttf" id="2_ensg2"]
+[ext_resource type="Texture2D" uid="uid://batlndmprlqkv" path="res://assets/visual/ui/gold_icon.png" id="3_yie2m"]
+[ext_resource type="Script" path="res://scripts/debug_label.gd" id="4_e0ywa"]
+[ext_resource type="ButtonGroup" uid="uid://dpc14sndt0ofr" path="res://assets/visual/ui/button_group_towers.tres" id="5_d0ax0"]
+[ext_resource type="Texture2D" uid="uid://p0a1md8eipao" path="res://assets/visual/ui/archer_tower_button/archer_tower_button_normal.png" id="6_n6ecu"]
+[ext_resource type="Texture2D" uid="uid://clla2f5x4ddha" path="res://assets/visual/ui/archer_tower_button/archer_tower_button_selected.png" id="7_ho1hs"]
+[ext_resource type="Texture2D" uid="uid://drf5cxlu4r5mb" path="res://assets/visual/ui/archer_tower_button/archer_tower_button_disabled.png" id="8_20i3y"]
+[ext_resource type="Texture2D" uid="uid://ckqobsij0n6jx" path="res://assets/visual/ui/mage_tower_button/mage_tower_button_normal.png" id="9_kow51"]
+[ext_resource type="Texture2D" uid="uid://bu38jo4qmd2lr" path="res://assets/visual/ui/mage_tower_button/mage_tower_button_active.png" id="10_emd6e"]
+[ext_resource type="Texture2D" uid="uid://bm15gqaalf5lw" path="res://assets/visual/ui/mage_tower_button/mage_tower_button_disabled.png" id="11_qkhcj"]
+[ext_resource type="Texture2D" uid="uid://l06t3jlgoife" path="res://assets/visual/ui/druid_tower_button/druid_tower_normal.png" id="12_kghmd"]
+[ext_resource type="Texture2D" uid="uid://dulxf1eqgiw1" path="res://assets/visual/ui/druid_tower_button/druid_tower_selected.png" id="13_vjdva"]
+[ext_resource type="Texture2D" uid="uid://cjafp2xxdkmtt" path="res://assets/visual/ui/druid_tower_button/druid_tower_disabled.png" id="14_7oyyv"]
+[ext_resource type="Texture2D" uid="uid://boi7pvhr6n0br" path="res://assets/visual/ui/cannon_tower_button/cannon_tower_button_normal.png" id="15_chf52"]
+[ext_resource type="Texture2D" uid="uid://dr48d7h8hxk1x" path="res://assets/visual/ui/cannon_tower_button/cannon_tower_button_selected.png" id="16_23sgj"]
+[ext_resource type="Texture2D" uid="uid://dm1267t0sp43c" path="res://assets/visual/ui/cannon_tower_button/cannon_tower_button_disabled.png" id="17_bkm7e"]
+[ext_resource type="PackedScene" uid="uid://bjrsg0852vbv1" path="res://scenes/wave_progress_bar.tscn" id="18_gyw6a"]
+[ext_resource type="Texture2D" uid="uid://ceeqb62il5o3n" path="res://assets/visual/ui/bell_button.png" id="19_me6v4"]
+[ext_resource type="Texture2D" uid="uid://c2g61krdljcrm" path="res://assets/visual/archer_tower.png" id="20_ymv3i"]
+[ext_resource type="Texture2D" uid="uid://pak8ecw4cwup" path="res://assets/visual/ui/fire_rate_icon.png" id="21_b4oy1"]
+[ext_resource type="Texture2D" uid="uid://dqyihtxr0ugwy" path="res://assets/visual/ui/damage_icon.png" id="22_hy8fy"]
+[ext_resource type="Texture2D" uid="uid://bi045jsf4jxsy" path="res://assets/visual/mage_tower.png" id="23_3npl5"]
+[ext_resource type="Texture2D" uid="uid://coh3hxnhxeden" path="res://assets/visual/ui/slowdown_icon.png" id="24_a3ak6"]
+[ext_resource type="Texture2D" uid="uid://dyuh3mg1wv22y" path="res://assets/visual/druid_tower.png" id="25_54lyq"]
+[ext_resource type="Texture2D" uid="uid://d0y2asgvopnti" path="res://assets/visual/cannon_tower.png" id="26_ooacp"]
+[ext_resource type="Texture2D" uid="uid://wqrm7ktgj6v3" path="res://assets/visual/ui/aoe_icon.png" id="27_cwj6i"]
+[ext_resource type="Script" path="res://scripts/title_displayer.gd" id="28_aa1cc"]
+[ext_resource type="Texture2D" uid="uid://dh5wsywnl3sjw" path="res://assets/visual/ui/slide_in.png" id="29_p052c"]
+[ext_resource type="FontFile" uid="uid://bspmm0n21y6lk" path="res://assets/visual/ui/fonts/Adventurer.ttf" id="30_pd3lu"]
+[ext_resource type="PackedScene" uid="uid://g88084h8hqb5" path="res://scenes/pause_menu.tscn" id="31_nfk2w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irxl4"]
+bg_color = Color(0, 0, 0, 0.823529)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 0.156863)
+shadow_size = 1
+shadow_offset = Vector2(1, 2)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="TopContainer" type="PanelContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TopContainer"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/TopContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="LivesTexture" type="TextureRect" parent="VBoxContainer/TopContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_pt3y5")
+stretch_mode = 3
+
+[node name="LivesLabel" type="Label" parent="VBoxContainer/TopContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_ensg2")
+text = "20"
+vertical_alignment = 2
+
+[node name="Control2" type="Control" parent="VBoxContainer/TopContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="GoldTexture" type="TextureRect" parent="VBoxContainer/TopContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_yie2m")
+stretch_mode = 3
+
+[node name="GoldLabel" type="Label" parent="VBoxContainer/TopContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_ensg2")
+text = "100
+"
+vertical_alignment = 2
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 480)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/PanelContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Control" type="Control" parent="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TowerLabel" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_ensg2")
+theme_override_font_sizes/font_size = 22
+text = "Towers"
+script = ExtResource("4_e0ywa")
+
+[node name="ArcherTowerButton" type="TextureButton" parent="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("5_d0ax0")
+texture_normal = ExtResource("6_n6ecu")
+texture_pressed = ExtResource("7_ho1hs")
+texture_disabled = ExtResource("8_20i3y")
+
+[node name="MageTowerButton" type="TextureButton" parent="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("5_d0ax0")
+texture_normal = ExtResource("9_kow51")
+texture_pressed = ExtResource("10_emd6e")
+texture_disabled = ExtResource("11_qkhcj")
+
+[node name="DruidTowerButton" type="TextureButton" parent="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("5_d0ax0")
+texture_normal = ExtResource("12_kghmd")
+texture_pressed = ExtResource("13_vjdva")
+texture_disabled = ExtResource("14_7oyyv")
+
+[node name="CannonTowerButton" type="TextureButton" parent="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+action_mode = 0
+button_group = ExtResource("5_d0ax0")
+texture_normal = ExtResource("15_chf52")
+texture_pressed = ExtResource("16_23sgj")
+texture_disabled = ExtResource("17_bkm7e")
+
+[node name="Sep" type="Control" parent="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+modulate = Color(0.776471, 0.776471, 0.776471, 1)
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Control" type="Control" parent="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+theme_override_font_sizes/font_size = 22
+text = "Progress"
+vertical_alignment = 1
+
+[node name="WaveProgressBar" parent="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("18_gyw6a")]
+layout_mode = 2
+step = 0.0
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture_normal = ExtResource("19_me6v4")
+
+[node name="ArchersDescriptionPanel" type="Panel" parent="."]
+visible = false
+offset_left = 60.0
+offset_top = 408.0
+offset_right = 164.0
+offset_bottom = 505.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_irxl4")
+
+[node name="MarginContainer" type="MarginContainer" parent="ArchersDescriptionPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ArchersDescriptionPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+metadata/_edit_group_ = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="ArchersDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="ArchersDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+text = "Archers"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="ArchersDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("20_ymv3i")
+stretch_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="ArchersDescriptionPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+color = Color(0.376638, 0.737163, 0.3019, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ArchersDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="ArchersDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_yie2m")
+stretch_mode = 2
+
+[node name="ArchersCostLabel" type="Label" parent="ArchersDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+text = "0"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ArchersDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="ArchersDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("21_b4oy1")
+stretch_mode = 2
+
+[node name="ArchersFireRateLabel" type="Label" parent="ArchersDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+horizontal_alignment = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ArchersDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="ArchersDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("22_hy8fy")
+
+[node name="ArchersDamageLabel" type="Label" parent="ArchersDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+text = "10"
+
+[node name="MagesDescriptionPanel" type="Panel" parent="."]
+visible = false
+offset_left = 101.0
+offset_top = 389.0
+offset_right = 205.0
+offset_bottom = 505.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_irxl4")
+
+[node name="MarginContainer" type="MarginContainer" parent="MagesDescriptionPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MagesDescriptionPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+metadata/_edit_group_ = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+text = "Mages"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("23_3npl5")
+stretch_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+color = Color(0.380545, 0.580346, 0.827543, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_yie2m")
+stretch_mode = 2
+
+[node name="MagesCostLabel" type="Label" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("21_b4oy1")
+stretch_mode = 2
+
+[node name="MageFireRateLabel" type="Label" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+horizontal_alignment = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("22_hy8fy")
+
+[node name="MageDamageLabel" type="Label" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+vertical_alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect2" type="TextureRect" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("24_a3ak6")
+stretch_mode = 2
+
+[node name="MageBonusLabel" type="Label" parent="MagesDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+text = "Freezes"
+vertical_alignment = 1
+
+[node name="DruidsDescriptionPanel" type="Panel" parent="."]
+visible = false
+offset_left = 148.0
+offset_top = 409.0
+offset_right = 252.0
+offset_bottom = 505.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_irxl4")
+
+[node name="MarginContainer" type="MarginContainer" parent="DruidsDescriptionPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DruidsDescriptionPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+metadata/_edit_group_ = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="DruidsDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="DruidsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+text = "Druids"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="DruidsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("25_54lyq")
+stretch_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="DruidsDescriptionPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+color = Color(0.380545, 0.580346, 0.827543, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="DruidsDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="DruidsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_yie2m")
+stretch_mode = 2
+
+[node name="DruidsCostLabel" type="Label" parent="DruidsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="DruidsDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="DruidsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("21_b4oy1")
+stretch_mode = 2
+
+[node name="DruidsFireRateLabel" type="Label" parent="DruidsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+horizontal_alignment = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="DruidsDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="DruidsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("22_hy8fy")
+
+[node name="DruidsDamageLabel" type="Label" parent="DruidsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+vertical_alignment = 1
+
+[node name="CannonsDescriptionPanel" type="Panel" parent="."]
+visible = false
+offset_left = 183.0
+offset_top = 389.0
+offset_right = 287.0
+offset_bottom = 505.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_irxl4")
+
+[node name="MarginContainer" type="MarginContainer" parent="CannonsDescriptionPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CannonsDescriptionPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 2
+metadata/_edit_group_ = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+text = "Cannons"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("26_ooacp")
+stretch_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+color = Color(0.380545, 0.580346, 0.827543, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_yie2m")
+stretch_mode = 2
+
+[node name="CannonsCostLabel" type="Label" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("21_b4oy1")
+stretch_mode = 2
+
+[node name="CannonsFireRateLabel" type="Label" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+horizontal_alignment = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("22_hy8fy")
+
+[node name="CannonsDamageLabel" type="Label" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+vertical_alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect2" type="TextureRect" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("27_cwj6i")
+stretch_mode = 2
+
+[node name="CannonsBonusLabel" type="Label" parent="CannonsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_ensg2")
+text = "Area dmg"
+vertical_alignment = 1
+
+[node name="NotificationBox" type="VBoxContainer" parent="."]
+offset_left = 233.0
+offset_top = 35.0
+offset_right = 478.0
+offset_bottom = 240.0
+
+[node name="TitleDisplayer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("28_aa1cc")
+
+[node name="SlideInBackground" type="TextureRect" parent="TitleDisplayer"]
+modulate = Color(1, 1, 1, 0.878431)
+layout_mode = 0
+offset_left = 516.0
+offset_top = 60.0
+offset_right = 1116.0
+offset_bottom = 188.0
+texture = ExtResource("29_p052c")
+
+[node name="SlideInLevelID" type="Label" parent="TitleDisplayer"]
+layout_mode = 1
+offset_left = -250.0
+offset_top = 78.0
+offset_right = -93.0
+offset_bottom = 169.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("30_pd3lu")
+theme_override_font_sizes/font_size = 44
+text = "Level 1
+The City"
+horizontal_alignment = 1
+
+[node name="Opacifier" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="PauseMenu" parent="." instance=ExtResource("31_nfk2w")]
+visible = false
+
+[connection signal="mouse_entered" from="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/ArcherTowerButton" to="ArchersDescriptionPanel" method="set_visible" binds= [true]]
+[connection signal="mouse_exited" from="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/ArcherTowerButton" to="ArchersDescriptionPanel" method="set_visible" binds= [false]]
+[connection signal="mouse_entered" from="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/MageTowerButton" to="MagesDescriptionPanel" method="set_visible" binds= [true]]
+[connection signal="mouse_exited" from="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/MageTowerButton" to="MagesDescriptionPanel" method="set_visible" binds= [false]]
+[connection signal="mouse_entered" from="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/DruidTowerButton" to="DruidsDescriptionPanel" method="set_visible" binds= [true]]
+[connection signal="mouse_exited" from="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/DruidTowerButton" to="DruidsDescriptionPanel" method="set_visible" binds= [false]]
+[connection signal="mouse_entered" from="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/CannonTowerButton" to="CannonsDescriptionPanel" method="set_visible" binds= [true]]
+[connection signal="mouse_exited" from="VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/CannonTowerButton" to="CannonsDescriptionPanel" method="set_visible" binds= [false]]

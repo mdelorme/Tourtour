@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://dkbmjyq7v1wbg"]
+
+[ext_resource type="Script" path="res://scripts/arrow.gd" id="1_dqxl4"]
+[ext_resource type="Texture2D" uid="uid://cx7ng6nf02roe" path="res://assets/visual/arrow.png" id="2_fupd4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c30x"]
+atlas = ExtResource("2_fupd4")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elvds"]
+atlas = ExtResource("2_fupd4")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7etw"]
+atlas = ExtResource("2_fupd4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pq7x"]
+atlas = ExtResource("2_fupd4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ve5i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c30x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elvds")
+}],
+"loop": true,
+"name": &"horizontal",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7etw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pq7x")
+}],
+"loop": true,
+"name": &"vertical",
+"speed": 10.0
+}]
+
+[node name="Arrow" type="Node2D"]
+script = ExtResource("1_dqxl4")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7ve5i")
+animation = &"vertical"

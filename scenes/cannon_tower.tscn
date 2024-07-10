@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://yofw5d56ages"]
+
+[ext_resource type="PackedScene" uid="uid://b04w2f32ftfxg" path="res://scenes/tower.tscn" id="1_rqmdj"]
+[ext_resource type="Texture2D" uid="uid://d0y2asgvopnti" path="res://assets/visual/cannon_tower.png" id="2_ioerk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p1t8t"]
+resource_local_to_scene = true
+
+[node name="Tower" instance=ExtResource("1_rqmdj")]
+type = 3
+projectile_speed = 500.0
+firing_sound = 15
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_ioerk")
+
+[node name="Area2D" parent="." index="1"]
+collision_layer = 0
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_p1t8t")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://8irtlpbhn006"]
+
+[ext_resource type="Script" path="res://scripts/TowerButton.gd" id="1_rrs4x"]
+[ext_resource type="Texture2D" uid="uid://drf5cxlu4r5mb" path="res://assets/visual/ui/archer_tower_button/archer_tower_button_disabled.png" id="3_3s5ou"]
+[ext_resource type="Texture2D" uid="uid://clla2f5x4ddha" path="res://assets/visual/ui/archer_tower_button/archer_tower_button_selected.png" id="4_wns88"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vjoi"]
+size = Vector2(16, 16)
+
+[node name="Button" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_rrs4x")
+
+[node name="NormalState" type="Sprite2D" parent="."]
+texture = ExtResource("4_wns88")
+
+[node name="DisabledState" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_3s5ou")
+
+[node name="ActiveState" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_wns88")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_2vjoi")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_input_event"]

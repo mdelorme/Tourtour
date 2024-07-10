@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgs14t28pc7vl"]
+
+[ext_resource type="PackedScene" uid="uid://dgc6daev737xv" path="res://scenes/enemy.tscn" id="1_5o60h"]
+[ext_resource type="Texture2D" uid="uid://fc0cfgg20kyf" path="res://assets/visual/ui/icons/icon_goblin.png" id="2_ayup7"]
+[ext_resource type="SpriteFrames" uid="uid://vsv1cxvc8qx4" path="res://assets/visual/SpriteFrames/goblin.tres" id="3_y35o2"]
+[ext_resource type="AudioStream" uid="uid://dfdmdltppr4wj" path="res://assets/sounds/enemies/goblin_dying.wav" id="4_gfky5"]
+
+[node name="Enemy" instance=ExtResource("1_5o60h")]
+icon = ExtResource("2_ayup7")
+monster_name = "Goblin"
+life = 400
+speed = 100.0
+frames = ExtResource("3_y35o2")
+bounty = 4
+
+[node name="DyingSound" parent="Sounds" index="0"]
+stream = ExtResource("4_gfky5")

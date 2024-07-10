@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn5xl1l0tlnes"]
+
+[ext_resource type="PackedScene" uid="uid://dgc6daev737xv" path="res://scenes/enemy.tscn" id="1_kluyj"]
+[ext_resource type="Texture2D" uid="uid://bwginqwvuq3pc" path="res://assets/visual/ui/icons/icon_red_demon.png" id="2_0ip10"]
+[ext_resource type="SpriteFrames" uid="uid://dxe6hsqvg7g5" path="res://assets/visual/SpriteFrames/red_demon.tres" id="2_xkrq5"]
+[ext_resource type="AudioStream" uid="uid://du1qnbyf373gw" path="res://assets/sounds/enemies/red_demon_dying.wav" id="4_u4l4m"]
+
+[node name="Enemy" instance=ExtResource("1_kluyj")]
+icon = ExtResource("2_0ip10")
+monster_name = "Red Demon"
+life = 1000
+speed = 160.0
+frames = ExtResource("2_xkrq5")
+bounty = 6
+immune_to_cannon = true
+dying_sound = 6
+
+[node name="AnimatedSprite" parent="." index="0"]
+sprite_frames = ExtResource("2_xkrq5")
+
+[node name="DyingSound" parent="Sounds" index="0"]
+stream = ExtResource("4_u4l4m")

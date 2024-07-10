@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://bvg23ql3bij7p"]
+
+[ext_resource type="Texture2D" uid="uid://oyh5ymi7j5cj" path="res://assets/visual/cannonball.png" id="1_1q61e"]
+[ext_resource type="Script" path="res://scripts/cannon_ball.gd" id="1_v0rjs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpjed"]
+atlas = ExtResource("1_1q61e")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsrnk"]
+atlas = ExtResource("1_1q61e")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daefj"]
+atlas = ExtResource("1_1q61e")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5g5sb"]
+atlas = ExtResource("1_1q61e")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7kg6j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpjed")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qsrnk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daefj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5g5sb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8e8h2"]
+
+[node name="CannonBall" type="Node2D"]
+script = ExtResource("1_v0rjs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7kg6j")
+frame_progress = 0.0297245
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_8e8h2")

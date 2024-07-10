@@ -1,0 +1,15 @@
+Level 1 - The City
+300.0
+goblin 1 1.0 10
+goblin 5 1.0 10
+goblin 19 0.7 10
+goblin 30 0.4 10
+orc 10 0.7 10
+orc 20 0.5 10
+goblin 40 0.1 10
+orc 20 0.2 5
+orc_shaman 20 0.8 5
+goblin 50 0.1 10
+orc_shaman 20 0.2 5
+goblin 130 0.05 10
+green_dragon 1 1.0 20000.0

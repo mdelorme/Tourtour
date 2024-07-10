@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://b21cpikeus68q"]
+
+[ext_resource type="PackedScene" uid="uid://dgc6daev737xv" path="res://scenes/enemy.tscn" id="1_kedyd"]
+[ext_resource type="Texture2D" uid="uid://c3kg1yiuaj4im" path="res://assets/visual/ui/icons/icon_ghost_warrior.png" id="2_rqf5r"]
+[ext_resource type="SpriteFrames" uid="uid://dlec8kee5ku32" path="res://assets/visual/SpriteFrames/ghost_warrior.tres" id="3_5kmmi"]
+
+[node name="Enemy" instance=ExtResource("1_kedyd")]
+modulate = Color(1, 1, 1, 0.501961)
+icon = ExtResource("2_rqf5r")
+monster_name = "Ghost Warrior"
+life = 1200
+speed = 30.0
+frames = ExtResource("3_5kmmi")
+bounty = 12
+immune_to_cannon = true
+immune_to_arrows = true
+dying_sound = 10

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctrle1tmcjs6d"]
+
+[ext_resource type="Script" path="res://scripts/ice_projectile.gd" id="1_e5ds6"]
+[ext_resource type="Texture2D" uid="uid://chkv6vmlrjvu3" path="res://assets/visual/ice_projectile.png" id="1_jrdur"]
+
+[sub_resource type="Gradient" id="Gradient_nbf12"]
+colors = PackedColorArray(0.141176, 0.623529, 0.870588, 1, 1, 1, 1, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mxh6m"]
+
+[node name="IceProjectile" type="Node2D"]
+script = ExtResource("1_e5ds6")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+lifetime = 0.4
+spread = 10.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 100.0
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+color = Color(0.870588, 0.956863, 0.980392, 1)
+color_ramp = SubResource("Gradient_nbf12")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jrdur")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_mxh6m")

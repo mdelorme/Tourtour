@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://denu6g2teltul"]
+
+[ext_resource type="PackedScene" uid="uid://dgc6daev737xv" path="res://scenes/enemy.tscn" id="1_0id24"]
+[ext_resource type="Texture2D" uid="uid://ci7fy5pbrq2ne" path="res://assets/visual/ui/icons/icon_skeleton.png" id="2_bak3l"]
+[ext_resource type="SpriteFrames" uid="uid://h1x5uesd0127" path="res://assets/visual/SpriteFrames/skeleton.tres" id="3_stfas"]
+
+[node name="Enemy" instance=ExtResource("1_0id24")]
+icon = ExtResource("2_bak3l")
+monster_name = "Skeleton"
+life = 200
+speed = 80.0
+frames = ExtResource("3_stfas")
+bounty = 5
+immune_to_arrows = true
+dying_sound = 8

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://7hrx76sb54pr"]
+
+[ext_resource type="PackedScene" uid="uid://dgc6daev737xv" path="res://scenes/enemy.tscn" id="1_btdh4"]
+[ext_resource type="Texture2D" uid="uid://duacuuikbn3cd" path="res://assets/visual/ui/icons/icon_orc.png" id="2_jxmsv"]
+[ext_resource type="SpriteFrames" uid="uid://c2ng22et8dmko" path="res://assets/visual/SpriteFrames/orc.tres" id="3_1hbvb"]
+
+[node name="Enemy" instance=ExtResource("1_btdh4")]
+icon = ExtResource("2_jxmsv")
+monster_name = "Orc"
+life = 1500
+speed = 60.0
+frames = ExtResource("3_1hbvb")
+bounty = 10
+dying_sound = 4

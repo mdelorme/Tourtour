@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcory1bonhdy4"]
+
+[ext_resource type="Script" path="res://scripts/codex_entry.gd" id="1_58fyg"]
+[ext_resource type="FontFile" uid="uid://bspmm0n21y6lk" path="res://assets/visual/ui/fonts/Adventurer.ttf" id="1_u5j7j"]
+
+[node name="CodexEntry" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+script = ExtResource("1_58fyg")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+mouse_filter = 0
+theme_override_colors/font_color = Color(0.815686, 0.403922, 0.0392157, 1)
+theme_override_fonts/font = ExtResource("1_u5j7j")
+theme_override_font_sizes/font_size = 16
+text = "Test text"
+
+[connection signal="gui_input" from="Label" to="." method="_on_label_gui_input"]
+[connection signal="mouse_entered" from="Label" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Label" to="." method="_on_mouse_exited"]

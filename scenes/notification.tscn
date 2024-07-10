@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk1fju5ql7dmv"]
+
+[ext_resource type="Script" path="res://scripts/notification.gd" id="1_woupp"]
+[ext_resource type="FontFile" uid="uid://bspmm0n21y6lk" path="res://assets/visual/ui/fonts/Adventurer.ttf" id="2_qw50g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nufcx"]
+bg_color = Color(0, 0, 0, 0.796078)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Panel" type="Panel"]
+custom_minimum_size = Vector2(0, 38)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+scale = Vector2(1, 1e-05)
+theme_override_styles/panel = SubResource("StyleBoxFlat_nufcx")
+script = ExtResource("1_woupp")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="HBox" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Image" type="TextureRect" parent="MarginContainer/HBox"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+stretch_mode = 3
+
+[node name="Control" type="Control" parent="MarginContainer/HBox"]
+layout_mode = 2
+
+[node name="Text" type="Label" parent="MarginContainer/HBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_qw50g")
+text = "test"

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg2okrvo0y37d"]
+
+[ext_resource type="PackedScene" uid="uid://b04w2f32ftfxg" path="res://scenes/tower.tscn" id="1_v62tg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gcsmk"]
+resource_local_to_scene = true
+
+[node name="Tower" instance=ExtResource("1_v62tg")]
+projectile_speed = 500.0
+
+[node name="Area2D" parent="." index="1"]
+collision_layer = 0
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_gcsmk")

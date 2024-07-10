@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://b73rfj7u0nki"]
+
+[ext_resource type="Texture2D" uid="uid://c7f0etvxmic2n" path="res://assets/visual/explosion2.png" id="1_ekf4d"]
+[ext_resource type="Script" path="res://scripts/explosion2.gd" id="2_6x8kl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ynl3"]
+atlas = ExtResource("1_ekf4d")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sw2m5"]
+atlas = ExtResource("1_ekf4d")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_imf8y"]
+atlas = ExtResource("1_ekf4d")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vo18y"]
+atlas = ExtResource("1_ekf4d")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_udv5p"]
+atlas = ExtResource("1_ekf4d")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7ved"]
+atlas = ExtResource("1_ekf4d")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bccl"]
+atlas = ExtResource("1_ekf4d")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07njg"]
+atlas = ExtResource("1_ekf4d")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b4dwy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ynl3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sw2m5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_imf8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vo18y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_udv5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7ved")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bccl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07njg")
+}],
+"loop": false,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="Explosion" type="AnimatedSprite2D"]
+z_index = 100
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_b4dwy")
+frame_progress = 1.0
+script = ExtResource("2_6x8kl")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

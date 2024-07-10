@@ -1,0 +1,147 @@
+[gd_scene load_steps=8 format=3 uid="uid://0rwuo5f1sk5e"]
+
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_l5h7d"]
+[ext_resource type="FontFile" uid="uid://bspmm0n21y6lk" path="res://assets/visual/ui/fonts/Adventurer.ttf" id="1_xojsr"]
+[ext_resource type="AudioStream" uid="uid://cwlx5xtvxsyll" path="res://assets/music/game_over.ogg" id="3_ikvvn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1c0b2"]
+bg_color = Color(0, 0, 0, 0.921569)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.521569, 0.290196, 0.384314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otkrf"]
+bg_color = Color(0.521569, 0.290196, 0.384314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.301961, 0.152941, 0.215686, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 2
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpmkc"]
+bg_color = Color(0.521569, 0.290196, 0.384314, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.815686, 0.811765, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 2
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vrs4k"]
+bg_color = Color(0.239216, 0.117647, 0.168627, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.815686, 0.811765, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 2
+shadow_offset = Vector2(1, 1)
+
+[node name="GameOver" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l5h7d")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1c0b2")
+
+[node name="GameOverTxt" type="Label" parent="MarginContainer/Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 113.0
+offset_right = 419.0
+offset_bottom = 204.0
+theme_override_colors/font_color = Color(0.623529, 0.105882, 0.105882, 1)
+theme_override_fonts/font = ExtResource("1_xojsr")
+theme_override_font_sizes/font_size = 44
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="MonstersHaveWonTxt" type="Label" parent="MarginContainer/Panel"]
+layout_mode = 0
+offset_top = 204.0
+offset_right = 418.0
+offset_bottom = 295.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_xojsr")
+theme_override_font_sizes/font_size = 34
+text = "The monsters have 
+conquered the country"
+horizontal_alignment = 1
+
+[node name="RetryButton" type="Button" parent="MarginContainer/Panel"]
+layout_mode = 0
+offset_left = 134.0
+offset_top = 354.0
+offset_right = 287.0
+offset_bottom = 403.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("1_xojsr")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_otkrf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kpmkc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vrs4k")
+text = "Retry
+"
+
+[node name="BackToMenuButton" type="Button" parent="MarginContainer/Panel"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 430.0
+offset_right = 365.0
+offset_bottom = 479.0
+focus_mode = 0
+theme_override_fonts/font = ExtResource("1_xojsr")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_otkrf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_kpmkc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vrs4k")
+text = "Back to main menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ikvvn")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="MarginContainer/Panel/RetryButton" to="." method="_on_retry_button_pressed"]
+[connection signal="pressed" from="MarginContainer/Panel/BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]

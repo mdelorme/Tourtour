@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqao6g6ae1ubb"]
+
+[ext_resource type="Script" path="res://scripts/blueprint.gd" id="1_orwiw"]
+[ext_resource type="Texture2D" uid="uid://c2g61krdljcrm" path="res://assets/visual/archer_tower.png" id="2_ndckf"]
+[ext_resource type="PackedScene" uid="uid://bg2okrvo0y37d" path="res://scenes/archer_tower.tscn" id="3_52wv0"]
+[ext_resource type="PackedScene" uid="uid://bert1gmb73kyn" path="res://scenes/mage_tower.tscn" id="4_5ou70"]
+[ext_resource type="PackedScene" uid="uid://yofw5d56ages" path="res://scenes/cannon_tower.tscn" id="5_2hwoo"]
+[ext_resource type="PackedScene" uid="uid://dbliapui0s8hl" path="res://scenes/druid_tower.tscn" id="6_xypi1"]
+
+[node name="Blueprint" type="Node2D"]
+script = ExtResource("1_orwiw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+texture = ExtResource("2_ndckf")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ArcherTower" parent="Node2D" instance=ExtResource("3_52wv0")]
+visible = false
+active = false
+
+[node name="CannonTower" parent="Node2D" instance=ExtResource("5_2hwoo")]
+visible = false
+active = false
+
+[node name="DruidTower" parent="Node2D" instance=ExtResource("6_xypi1")]
+visible = false
+active = false
+
+[node name="MageTower" parent="Node2D" instance=ExtResource("4_5ou70")]
+visible = false
+active = false

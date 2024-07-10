@@ -1,0 +1,224 @@
+[gd_scene load_steps=4 format=3 uid="uid://bibmug15nxjgl"]
+
+[ext_resource type="Texture2D" uid="uid://c804p0l5twdor" path="res://assets/visual/ui/menu_background.png" id="1_qp1ts"]
+[ext_resource type="FontFile" uid="uid://bspmm0n21y6lk" path="res://assets/visual/ui/fonts/Adventurer.ttf" id="2_akbdj"]
+[ext_resource type="Script" path="res://scripts/credits.gd" id="2_n7b4a"]
+
+[node name="Credits" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qp1ts")
+script = ExtResource("2_n7b4a")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 1067.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 250)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.976471, 0.886275, 0.513726, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 80
+text = "TOURTOUR"
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+color = Color(1, 0.72549, 0, 1)
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="Programming" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 18
+text = "- Programming, level design, major tweaking -"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 12
+text = "Maxime Delorme"
+horizontal_alignment = 1
+
+[node name="Spacer2" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Visual Assets" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 20
+text = "- Visual Assets -"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 12
+text = "16x16 miniworld sprites by Shade and Octoshrimp (CC0)
+Heroic Assets Series icon pack by Aleksandr Makarov
+Bomb Party by Matt Hackett of Lost Decade Games (CC-BY 3.0)
+Gothicvania Town by Luis Zuno (CC0)
+Forest of Illusions by Luis Zuno (CC0)
+Fort of Illusions by Luis Zuno (CC0)
+Explosion pack 1 by Luis Zuno (CC0)
+RPG Icon pack by Kazzter
+Simple Natural Landscape by CraftPix2d.net (OGA-BY 3.0)"
+horizontal_alignment = 1
+
+[node name="Spacer3" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Fonts" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 20
+text = "- Fonts -"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 12
+text = "Adventurer by Brian J. Smith (CC-BY)
+Old Wizard by Angel (CC0)"
+horizontal_alignment = 1
+
+[node name="Spacer4" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Sounds" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 20
+text = "- Sounds -"
+horizontal_alignment = 1
+
+[node name="Label9" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 12
+text = "Monster grunts by Michel Baradari (CC-BY)
+RPG Sound Pack by ArtisticDude (CC0)
+Indie Friendly Sounds - RPG Sound Pack by Place Holder Assets
+700 Monsters Sounds by Game Santora"
+horizontal_alignment = 1
+
+[node name="Spacer5" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Music" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 20
+text = "- Music -"
+horizontal_alignment = 1
+
+[node name="Label10" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 12
+text = "Medieval: Exploration by RandomMind (CC0)
+Medieval: Harvest Season by RandomMind (CC0)
+Medieval: Minstrel Dance by RandomMind (CC0)
+Medieval: Battle by RandomMind (CC0)
+Spirit of  Valley by Tausdei (CC-BY 4.0)
+Game Over by Umplix (CC0)"
+horizontal_alignment = 1
+
+[node name="Spacer6" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Music2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 20
+text = "- Play testers -"
+horizontal_alignment = 1
+
+[node name="Label11" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 12
+text = "Mathéa Boudinet
+Élie Gedigier
+Victor Gruner
+Yohann Gruner
+Léna Lombardini"
+horizontal_alignment = 1
+
+[node name="ThankYou" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -11.5
+offset_right = 84.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("2_akbdj")
+theme_override_font_sizes/font_size = 44
+text = "Thank you for playing"

@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://b04w2f32ftfxg"]
+
+[ext_resource type="Script" path="res://scripts/tower.gd" id="1_3obyv"]
+[ext_resource type="Texture2D" uid="uid://c2g61krdljcrm" path="res://assets/visual/archer_tower.png" id="2_hwone"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lqw5u"]
+resource_local_to_scene = true
+
+[sub_resource type="Curve" id="Curve_utnfe"]
+_data = [Vector2(0, 0.26073), 0.0, 0.0, 0, 0, Vector2(0.51105, 0.867489), 0.0, 0.0, 0, 0, Vector2(1, 0.204936), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_8ufeo"]
+colors = PackedColorArray(0.55784, 0.1216, 0.76, 1, 1, 1, 1, 1)
+
+[node name="Tower" type="Node2D"]
+script = ExtResource("1_3obyv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(8, 8)
+texture = ExtResource("2_hwone")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(8, 7)
+shape = SubResource("CircleShape2D_lqw5u")
+
+[node name="Projectiles" type="Node2D" parent="."]
+position = Vector2(8, 7)
+
+[node name="Line2D" type="Line2D" parent="."]
+z_index = 100
+points = PackedVector2Array(8, 7)
+width = 5.0
+width_curve = SubResource("Curve_utnfe")
+gradient = SubResource("Gradient_8ufeo")
+joint_mode = 2
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_exited"]

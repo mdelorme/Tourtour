@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbliapui0s8hl"]
+
+[ext_resource type="PackedScene" uid="uid://b04w2f32ftfxg" path="res://scenes/tower.tscn" id="1_cwy6s"]
+[ext_resource type="Texture2D" uid="uid://dyuh3mg1wv22y" path="res://assets/visual/druid_tower.png" id="2_byxif"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x4mwu"]
+resource_local_to_scene = true
+
+[node name="Tower" instance=ExtResource("1_cwy6s")]
+type = 2
+firing_sound = 16
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_byxif")
+
+[node name="Area2D" parent="." index="1"]
+collision_layer = 0
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_x4mwu")

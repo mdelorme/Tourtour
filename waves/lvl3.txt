@@ -1,0 +1,24 @@
+Level 3 - The Cursed Graveyard
+300.0
+skeleton 5 2.75 10
+skeleton 15 0.25 10
+goblin 10 2.0 10
+orc 11 3.5 20
+ghost_warrior 10 0.2 15
+orc 25 1.0 20
+wendigo 6 5.0 20
+goblin 20 0.25 20
+necromancer 1 1.0 70
+ghost_warrior 50 0.15 10
+minotaur 2 2.0 10
+orc_shaman 40 1.0 10
+ghost_warrior 50 0.1 40
+necromancer 5 1.0 30
+wendigo 10 1.0 20
+goblin 400 0.02 20
+orc_shaman 300 0.05 10
+red_demon 100 0.01 20
+wendigo 20 0.05 10
+necromancer 40 0.5 10
+minotaur 100 0.5 10
+black_dragon 1 1.0 300000

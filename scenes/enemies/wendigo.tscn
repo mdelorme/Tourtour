@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyiqfm88n6ckb"]
+
+[ext_resource type="PackedScene" uid="uid://dgc6daev737xv" path="res://scenes/enemy.tscn" id="1_u8ife"]
+[ext_resource type="Texture2D" uid="uid://b40lfw2bo28kl" path="res://assets/visual/ui/icons/icon_wendigo.png" id="2_augox"]
+[ext_resource type="SpriteFrames" uid="uid://bnuv7jqq4gtaa" path="res://assets/visual/SpriteFrames/wendigo.tres" id="3_qq04o"]
+
+[node name="Enemy" instance=ExtResource("1_u8ife")]
+icon = ExtResource("2_augox")
+monster_name = "Wendigo"
+life = 4500
+speed = 60.0
+frames = ExtResource("3_qq04o")
+bounty = 30
+can_burrow = true
+dying_sound = 5
+
+[node name="Area2D" parent="." index="1"]
+collision_layer = 3
+collision_mask = 0

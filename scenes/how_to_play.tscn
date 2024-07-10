@@ -1,0 +1,349 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvihsjpki8p26"]
+
+[ext_resource type="Texture2D" uid="uid://c804p0l5twdor" path="res://assets/visual/ui/menu_background.png" id="1_6wqke"]
+[ext_resource type="FontFile" uid="uid://bspmm0n21y6lk" path="res://assets/visual/ui/fonts/Adventurer.ttf" id="2_4o8x5"]
+[ext_resource type="Script" path="res://scripts/how_to_play.gd" id="2_ok40a"]
+[ext_resource type="Texture2D" uid="uid://do65bmogkdkrf" path="res://assets/visual/ui/archer_tower_button/archer_tower_button_small.png" id="4_u4eey"]
+[ext_resource type="Texture2D" uid="uid://ch1o477el4fk" path="res://assets/visual/ui/mage_tower_button/mage_tower_button_small.png" id="5_cxmc6"]
+[ext_resource type="Texture2D" uid="uid://copwc7kddknok" path="res://assets/visual/ui/druid_tower_button/druid_tower_small.png" id="6_dmlph"]
+[ext_resource type="Texture2D" uid="uid://brd8ayhuwh6en" path="res://assets/visual/ui/cannon_tower_button/cannon_tower_button_small.png" id="7_iuy3a"]
+
+[node name="HowToPlay" type="TextureRect"]
+self_modulate = Color(0.341176, 0.341176, 0.341176, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6wqke")
+script = ExtResource("2_ok40a")
+
+[node name="Margin container" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Margin container"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="Margin container/VBoxContainer"]
+custom_minimum_size = Vector2(0, 430)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Page1" type="VBoxContainer" parent="Margin container/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HowtoPlay" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 24
+text = "How to play ?"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Margin container/VBoxContainer/MarginContainer/Page1"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_4o8x5")
+theme_override_font_sizes/normal_font_size = 17
+bbcode_enabled = true
+text = "[img]res://assets/visual/ui/heart_icon.png[/img] is your life. You lose one life when an enemy passes your defenses.
+
+[img]res://assets/visual/ui/gold_icon.png[/img] is your money. You gain it by killing enemies and can use it to buy new towers to protect your realm.
+
+[img]res://assets/visual/ui/icons/portal.png[/img] is a portal. This is where the enemies will spawn in waves. The last wave of the level is always a boss. The boss will defeat you if it reaches the end of the path.
+"
+fit_content = true
+
+[node name="Control" type="Control" parent="Margin container/VBoxContainer/MarginContainer/Page1"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Towers" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 24
+text = "Towers
+"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Margin container/VBoxContainer/MarginContainer/Page1"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Tower
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Icon
+"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Price
+"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Damage"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Attack speed"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Info"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.376471, 0.737255, 0.301961, 1)
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Archers"
+horizontal_alignment = 1
+
+[node name="Label2" type="TextureRect" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("4_u4eey")
+stretch_mode = 3
+
+[node name="Label3" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "100"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Small"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Fast"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Basic tower"
+horizontal_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.380392, 0.580392, 0.827451, 1)
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Mages"
+horizontal_alignment = 1
+
+[node name="Label2" type="TextureRect" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("5_cxmc6")
+stretch_mode = 3
+
+[node name="Label3" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "200"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Ridiculous"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Slow"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Freezing AOE"
+horizontal_alignment = 1
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.470588, 0.380392, 0.827451, 1)
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Druids"
+horizontal_alignment = 1
+
+[node name="Label2" type="TextureRect" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+texture = ExtResource("6_dmlph")
+stretch_mode = 3
+
+[node name="Label3" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "300"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Small"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Continuous"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "AOE"
+horizontal_alignment = 1
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.756863, 0.356863, 0.380392, 1)
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Cannons"
+horizontal_alignment = 1
+
+[node name="Label2" type="TextureRect" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+texture = ExtResource("7_iuy3a")
+stretch_mode = 3
+
+[node name="Label3" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "500"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Huge"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "Very slow"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 14
+text = "AOE"
+horizontal_alignment = 1
+
+[node name="Control2" type="Control" parent="Margin container/VBoxContainer/MarginContainer/Page1"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Waves" type="Label" parent="Margin container/VBoxContainer/MarginContainer/Page1"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("2_4o8x5")
+theme_override_font_sizes/font_size = 24
+text = "Waves
+"
+horizontal_alignment = 1
+
+[node name="WavesDesc" type="RichTextLabel" parent="Margin container/VBoxContainer/MarginContainer/Page1"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_4o8x5")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "The progress bar at the bottom of the screen indicates :
+In orange the next enemy to come	[img=186x16]res://assets/visual/ui/progress_bar_example_orange.png[/img]
+In blue the next wave to come		[img=186x16]res://assets/visual/ui/progress_bar_example_blue.png[/img]
+
+The bell button [img]res://assets/visual/ui/bell_button.png[/img] immediately starts the next wave."
+fit_content = true
+
+[node name="Label2" type="Label" parent="."]
+self_modulate = Color(0.658824, 0.658824, 0.658824, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_top = 575.0
+offset_right = 210.0
+offset_bottom = 591.0
+theme_override_fonts/font = ExtResource("2_4o8x5")
+text = "Press esc to go back"

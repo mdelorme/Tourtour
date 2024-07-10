@@ -1,0 +1,371 @@
+[gd_scene load_steps=7 format=3 uid="uid://b6yve7wkmw22"]
+
+[ext_resource type="Script" path="res://scripts/option_menu.gd" id="1_rjbc7"]
+[ext_resource type="FontFile" uid="uid://bspmm0n21y6lk" path="res://assets/visual/ui/fonts/Adventurer.ttf" id="2_wyukh"]
+[ext_resource type="AudioStream" uid="uid://chftvyfqpvv6u" path="res://assets/sounds/enemies/goblin_dying_loop.wav" id="4_hs77b"]
+[ext_resource type="AudioStream" uid="uid://br6fhckc8u7if" path="res://assets/sounds/env/Birds Loop 02.wav" id="5_jjmnk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gi187"]
+content_margin_left = 10.0
+content_margin_right = 10.0
+bg_color = Color(0.301961, 0.152941, 0.215686, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.976471, 0.886275, 0.513726, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 9
+shadow_offset = Vector2(5, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghgj2"]
+content_margin_top = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.976471, 0.886275, 0.513726, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="OptionsWindow" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rjbc7")
+is_modal = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="OptionMenu" type="Panel" parent="MarginContainer"]
+process_mode = 3
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gi187")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/OptionMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/OptionMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 40
+text = "Options"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 30
+text = "Video"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 20
+text = "Screen mode"
+
+[node name="ScreenModeOptions" type="OptionButton" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 10
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 20
+item_count = 3
+selected = 0
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Maximized"
+popup/item_1/id = 1
+popup/item_2/text = "Windowed"
+popup/item_2/id = 2
+
+[node name="Control2" type="Control" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 30
+text = "Audio"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 20
+text = "Master volume"
+
+[node name="MasterSlider" type="HSlider" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_ghgj2")
+min_value = -70.0
+max_value = 0.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 20
+text = "Music volume"
+
+[node name="MusicSlider" type="HSlider" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_ghgj2")
+min_value = -70.0
+max_value = 0.0
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 20
+text = "Effects volume"
+
+[node name="EffectsSlider" type="HSlider" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer4"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_ghgj2")
+min_value = -70.0
+max_value = 0.0
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 20
+text = "Environment volume"
+
+[node name="EnvSlider" type="HSlider" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer5"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_ghgj2")
+min_value = -70.0
+max_value = 0.0
+
+[node name="Control4" type="Control" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 30
+text = "Game"
+
+[node name="EnableTutorials" type="CheckBox" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 20
+button_pressed = true
+text = "Enable tutorials"
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ResetProgressButton" type="Button" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer7"]
+custom_minimum_size = Vector2(170, 35)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 20
+text = "Reset progress"
+
+[node name="ResetTutorialsButton" type="Button" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer7"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(170, 30)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 20
+text = "Reset tutorials"
+
+[node name="Control3" type="Control" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 13
+alignment = 2
+
+[node name="ApplyButton" type="Button" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer6"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 20
+text = "Apply
+"
+
+[node name="CancelButton" type="Button" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer6"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 20
+text = "Cancel
+"
+
+[node name="TestSounds" type="Node" parent="."]
+
+[node name="EffectTest" type="AudioStreamPlayer" parent="TestSounds"]
+stream = ExtResource("4_hs77b")
+bus = &"Effects"
+
+[node name="EnvTest" type="AudioStreamPlayer" parent="TestSounds"]
+stream = ExtResource("5_jjmnk")
+bus = &"Environment"
+
+[node name="ConfirmationPanel" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.611765)
+
+[node name="ConfirmationPanel2" type="Panel" parent="ConfirmationPanel"]
+process_mode = 3
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -187.0
+offset_top = -102.5
+offset_right = 187.0
+offset_bottom = 102.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gi187")
+
+[node name="Label2" type="Label" parent="ConfirmationPanel/ConfirmationPanel2"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 17.0
+offset_right = 358.0
+offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 30
+text = "Please confirm 
+that you wish 
+to reset progress"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ApplyResetButton" type="Button" parent="ConfirmationPanel/ConfirmationPanel2"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 0
+offset_left = 27.0
+offset_top = 146.0
+offset_right = 167.0
+offset_bottom = 183.0
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 20
+text = "Reset"
+
+[node name="CancelResetButton" type="Button" parent="ConfirmationPanel/ConfirmationPanel2"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 0
+offset_left = 209.0
+offset_top = 146.0
+offset_right = 349.0
+offset_bottom = 183.0
+theme_override_fonts/font = ExtResource("2_wyukh")
+theme_override_font_sizes/font_size = 20
+text = "Cancel"
+
+[connection signal="item_selected" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer/ScreenModeOptions" to="." method="_on_screen_mode_changed"]
+[connection signal="drag_ended" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer2/MasterSlider" to="." method="_master_drag_ended"]
+[connection signal="drag_started" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer2/MasterSlider" to="." method="_master_drag_started"]
+[connection signal="value_changed" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer2/MasterSlider" to="." method="_master_drag_changed"]
+[connection signal="drag_ended" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer3/MusicSlider" to="." method="_music_drag_ended"]
+[connection signal="drag_started" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer3/MusicSlider" to="." method="_music_drag_started"]
+[connection signal="value_changed" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer3/MusicSlider" to="." method="_music_drag_changed"]
+[connection signal="drag_ended" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer4/EffectsSlider" to="." method="_effect_drag_ended"]
+[connection signal="drag_started" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer4/EffectsSlider" to="." method="_effect_drag_started"]
+[connection signal="value_changed" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer4/EffectsSlider" to="." method="_effect_drag_changed"]
+[connection signal="drag_ended" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer5/EnvSlider" to="." method="_env_drag_ended"]
+[connection signal="drag_started" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer5/EnvSlider" to="." method="_env_drag_started"]
+[connection signal="value_changed" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer5/EnvSlider" to="." method="_env_drag_changed"]
+[connection signal="toggled" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/EnableTutorials" to="." method="_on_enable_tutorials_toggled"]
+[connection signal="pressed" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer7/ResetProgressButton" to="." method="_on_reset_progress_button_pressed"]
+[connection signal="pressed" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer7/ResetTutorialsButton" to="." method="_on_reset_tutorials_button_pressed"]
+[connection signal="pressed" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer6/ApplyButton" to="." method="_on_apply_button_pressed"]
+[connection signal="pressed" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer6/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="ConfirmationPanel/ConfirmationPanel2/ApplyResetButton" to="." method="_confirm_reset_progress"]
+[connection signal="pressed" from="ConfirmationPanel/ConfirmationPanel2/CancelResetButton" to="." method="_cancel_reset"]
