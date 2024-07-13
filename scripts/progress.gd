@@ -118,9 +118,9 @@ func load() -> void:
 	
 	# Reading options 
 	line = save_game.get_line()
-	if line:
+	if line and line != '{}':
 		options = JSON.parse_string(line)
-		
+				
 		set_audio_bus_volume('Master', options['master_volume'])
 		set_audio_bus_volume('Effects', options['effects_volume'])
 		set_audio_bus_volume('Music', options['music_volume'])
@@ -136,7 +136,7 @@ func default_values() -> void:
 	options['music_volume']      = 0.0
 	options['effects_volume']    = 0.0
 	options['env_volume']        = 0.0
-	options['screen_mode']       = 'Fullscreen'
+	options['screen_mode']       = 1
 	options['tutorials_enabled'] = true
 	
 	save_progress()

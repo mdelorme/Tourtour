@@ -84,7 +84,6 @@ func _ready() -> void:
 	tween.tween_property(label_ch3_2, 'modulate', COLOR_TRANSPARENT, DURATION_LB_3_FADE_OUT)
 	tween.tween_property(opacifier, 'modulate', COLOR_OPAQUE, DURATION_OPACIFIER_FADE_IN)
 	tween.tween_interval(DURATION_LONG_PAUSE)
-	tween.tween_interval(DURATION_LONG_PAUSE)
 	tween.tween_property(main_background, 'modulate', COLOR_OPAQUE, 0.0)
 	tween.tween_property(opacifier, 'modulate', COLOR_TRANSPARENT, DURATION_FINAL_FADE_IN)
 	tween.tween_callback(roll_credits)
@@ -92,6 +91,8 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if speeding_up:
 		tween.custom_step(delta*5)
+		if $Credits and $Credits.visible:
+			$Credits.tween.custom_step(delta*5)
 		
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
@@ -103,7 +104,8 @@ func _input(event: InputEvent) -> void:
 			$TextureRect.visible = false
 	
 func roll_credits() -> void:
-	var next_scene : Node = load("res://scenes/credits.tscn").instantiate()
-	next_scene.game_finished = true
-	get_tree().root.add_child(next_scene)
-	queue_free()
+	$Credits.show()
+
+
+func _on_tree_exiting() -> void:
+	$AudioStreamPlayer.stop()

@@ -73,18 +73,31 @@ func _physics_process(delta: float) -> void:
 			rebuild_druid_line()
 		cooldown = max(0.0, cooldown - delta)
 
+func find_insert_position(advancement: float) -> int:
+	var L := 0
+	var R := enemy_list.size()
+	
+	while L < R-1:
+		var mid := (L+R)/2
+		var adv := enemy_list[mid].get_advancement()
+		if adv > advancement:
+			R = mid
+		else:
+			L = mid
+	return L
+	
 
 func _on_area_entered(area: Area2D) -> void:    
 	if not active:
 		return
 		
-	# Be carefule here ! 
+	# Be careful here ! 
 	# Only enemies should be monitorable, otherwise we might end up with
 	# other things being registered as enemies
 	if area.owner is Enemy:
 		var node : Enemy = area.owner as Enemy
 		enemy_list.append(node)
-		enemy_list.sort_custom(func(a: Enemy, b: Enemy) -> bool: return a.get_advancement() > b.get_advancement())
+		enemy_list.sort_custom(func(a: Enemy, b: Enemy) -> bool: return a.advancement > b.advancement)
 		if type == Constants.TowerType.Druid and not node.is_electrified:
 			node.is_electrified = true
 	
@@ -97,7 +110,7 @@ func _on_area_exited(area: Area2D) -> void:
 		
 	var node : Enemy = area.get_parent() as Enemy
 	enemy_list.erase(node)
-	enemy_list.sort_custom(func(a: Enemy, b: Enemy) -> bool: return a.get_advancement() > b.get_advancement())
+	#enemy_list.sort_custom(func(a: Enemy, b: Enemy) -> bool: return a.get_advancement() > b.get_advancement())
 	if type == Constants.TowerType.Druid and node.is_electrified:
 		node.is_electrified = false
 	

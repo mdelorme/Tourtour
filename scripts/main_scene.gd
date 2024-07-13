@@ -207,7 +207,7 @@ func _process(delta: float) -> void:
 		check_tutorials()
 		
 func spawn_enemy(enemy: PackedScene, spawner: Spawn) -> void:
-	var new_enemy : Enemy = enemy.instantiate() as Enemy
+	var new_enemy : Enemy  = enemy.instantiate()
 	new_enemy.connect('monster_passed', monster_passed)
 	new_enemy.connect('monster_died', monster_died)
 	new_enemy.connect('new_monster', new_monster)
@@ -216,6 +216,8 @@ func spawn_enemy(enemy: PackedScene, spawner: Spawn) -> void:
 	new_enemy.connect('play_sound', play_sound)
 	if new_enemy.can_scream:
 		new_enemy.connect('spawn_scream', spawn_scream)
+	if new_enemy.is_boss:
+		new_enemy.connect('kill_all', kill_all)
 	enemy_list.add_child(new_enemy)
 	new_enemy.position = spawner.position
 	new_enemy.init(trajectory)
@@ -250,7 +252,7 @@ func unselect_buttons() -> void:
 		can_twr_btn.button_pressed = false
 	
 	# Destroying blueprint
-	var bp := $MainScene/Blueprint
+	var bp := get_node_or_null("MainScene/Blueprint")
 	if bp:
 		bp.queue_free()
 	
@@ -278,6 +280,7 @@ func _input(event: InputEvent) -> void:
 		for key : String in ui_lookup.keys():
 			var btn : TextureButton = ui_lookup[key]
 			if event.is_action_pressed('ui_'+key) and btn and btn.visible and not btn.disabled:
+				unselect_buttons()
 				btn.pressed.emit()
 				btn.set_pressed_no_signal(true)
 				
@@ -296,6 +299,9 @@ func _input(event: InputEvent) -> void:
 				level_won()
 			elif event.is_action_released('dbg_kill_all'):
 				kill_all()
+			elif event.is_action_released('dbg_damage'):
+				if enemy_list.get_child_count() > 0:
+					enemy_list.get_child(0).damage(100000)
 				
 			if event.is_action_released('speed_up'):
 				Engine.time_scale = min(max_speed, Engine.time_scale * speed_accel)
@@ -388,16 +394,6 @@ func check_buttons_availability() -> void:
 		check_twr.call(drd_twr_btn, Constants.TOWER_PRICE_DRUID)
 	if can_twr_btn:
 		check_twr.call(can_twr_btn, Constants.TOWER_PRICE_CANNON)
-	
-func select_tower(tower_id: int) -> void:
-	play_sound(Constants.GameSoundId.Click)
-	# Trying to get existing bluepprint
-	var bp := get_node_or_null("MainScene/Blueprint")
-	if not bp:
-		# We create it
-		bp = blueprint.instantiate()
-		main_scene.add_child(bp)
-	bp.select_type(tower_id)
 	
 func change_gold(delta: int) -> void:
 	gold += delta
@@ -570,8 +566,20 @@ func giga_explosion() -> void:
 		
 func kill_all() -> void:
 	for enemy: Enemy in enemy_list.get_children():
-		enemy.damage(10000000)
+		if not enemy.is_boss:
+			enemy.damage(10000000)
+	spawn.boss_is_dead()
 
 
 func _on_options_window_visibility_changed() -> void:
-	pass # Replace with function body.
+	pass 
+	
+func select_tower(tower_id: int) -> void:
+	play_sound(Constants.GameSoundId.Click)
+	# Trying to get existing bluepprint
+	var bp := get_node_or_null("MainScene/Blueprint")
+	if not bp:
+		# We create it
+		bp = blueprint.instantiate()
+		main_scene.add_child(bp)
+	bp.select_type(tower_id)

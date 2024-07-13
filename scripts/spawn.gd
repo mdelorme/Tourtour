@@ -227,3 +227,9 @@ func debug_next_wave() -> int:
 		state = SpawnerState.WAIT_FOR_WAVE
 	next_wave()
 	return gold
+	
+func boss_is_dead() -> void:
+	current_wave = 10000
+	state = SpawnerState.WAIT_FOR_END
+	enemies_left = 0
+	

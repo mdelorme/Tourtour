@@ -24,6 +24,9 @@ func activate() -> void:
 	active = true
 
 func _process(delta: float) -> void:
+	# Lazy shit
+	$Label.modulate = $MarginContainer.modulate
+	
 	if not active:
 		return
 		
@@ -40,6 +43,7 @@ func _process(delta: float) -> void:
 			transition()
 		
 	glow += delta
+	
 	
 	
 func select_label(label_id: int) -> void:
@@ -69,7 +73,7 @@ func validate_choice() -> void:
 		SELECTED_NEWGAME:   next_scene = new_game()
 		SELECTED_OPTIONS:   $OptionsWindow.show()
 		SELECTED_CODEX:     $Codex.show()
-		SELECTED_CREDITS:   next_scene = load('res://scenes/credits.tscn').instantiate()
+		SELECTED_CREDITS:   $Credits.show() #next_scene = load('res://scenes/credits.tscn').instantiate()
 	if next_scene : 
 		get_tree().root.add_child(next_scene)
 		queue_free()

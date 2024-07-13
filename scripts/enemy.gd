@@ -59,6 +59,7 @@ var summoning_left : int
 var summoning_counter : int
 
 var glow_time : float
+var advancement : float
 
 enum State {
 	EST_WALKING,
@@ -85,12 +86,15 @@ func _ready() -> void:
 	if can_scream:
 		scream_cooldown = Constants.BOSS_SCREAM_COOLDOWN
 		scream_id = 0
+	if is_boss:
 		emit_signal('play_sound', Constants.GameSoundId.DragonScream)
 	if can_summon:
 		summoning_cooldown = Constants.NECRO_SUMMON_COOLDOWN
 		summoning_left     = Constants.NECRO_SUMMON_NUMBER
 	
 	check_progress()
+	
+	advancement = 0
 	
 func init(new_line : Line2D) -> void:
 	line = new_line
@@ -103,7 +107,9 @@ func init(new_line : Line2D) -> void:
 		emit_signal('shake', Constants.SHAKING_TIME_BOSS)
 	
 func get_advancement() -> float:
-	# This could probably be precalculated to avoid computing a lot of distances
+	return advancement
+	
+func compute_advancement() -> float:
 	var total_length := 0.0
 	for i in range(current_target-1):
 		var p1 := line.get_point_position(i)
@@ -184,7 +190,6 @@ func _physics_process(delta: float) -> void:
 				if current_target >= line.get_point_count():
 					if not is_boss:
 						$AnimatedSprite.play('die')
-						emit_signal('kill_all')
 					else:
 						emit_signal('monster_passed', self)
 					emit_signal('shake', Constants.SHAKING_TIME)
@@ -196,6 +201,8 @@ func _physics_process(delta: float) -> void:
 		glow_time += delta
 		var scale_value := 0.3 + 0.01 * sin(glow_time * 50.0)
 		$Glow.scale = Vector2(scale_value, scale_value)
+		
+	advancement = compute_advancement()
 		
 		
 func damage(amount: int) -> void:
@@ -219,6 +226,9 @@ func damage(amount: int) -> void:
 		modulate = Color(1.0, 1.0, 1.0, 1.0)  
 		
 		emit_signal('play_sound', dying_sound)
+		
+		if is_boss:
+			emit_signal('kill_all')
 		
 		if $Area2D:
 			$Area2D.queue_free()
@@ -366,7 +376,8 @@ func summon() -> void:
 		emit_signal('summon_enemy', ghost_warrior, position, current_target)
 		
 func toggle_electrocute(electrocute: bool) -> void:
-	$Glow.visible = electrocute
+	if active:
+		$Glow.visible = electrocute
 
 func _on_boss_death() -> void:
 	$Particles.visible = false
