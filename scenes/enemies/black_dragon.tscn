@@ -247,7 +247,7 @@ scale_max = 0.5
 
 [node name="Enemy" instance=ExtResource("1_7voof")]
 icon = ExtResource("2_yox1f")
-monster_name = "Black Dragon"
+monster_name = "MONSTER_BLACK_DRAGON"
 life = 1500000
 speed = 10.0
 frames = SubResource("SpriteFrames_4foh8")

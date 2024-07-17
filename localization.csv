@@ -1,0 +1,113 @@
+ID,en,fr
+UI_BACK,Back,Retour
+UI_BACK_TO_MENU,Back to main menu,Retour au menu
+UI_RETRY,Retry,Rééssayer
+UI_PRESS_ESC,Press esc to go back to the menu,Appuyez sur echap pour revenir au menu
+UI_TOWERS,Towers,Tours
+UI_PROGRESS,Progress,Avancement
+UI_NEXT,Next,Suivant
+UI_CANCEL,Cancel,Annuler
+UI_RESET,Reset,Remettre à zéro
+UI_APPLY,Apply,Appliquer
+UI_LANGUAGE,Language,Langue
+CHOOSE_LVL_TITLE,Choose a level,Choisissez un niveau
+CHOOSE_LVL_LVL1,Level 1:\nThe City,Niveau 1:\nLa Ville
+CHOOSE_LVL_LVL2,Level 2:\nThe Woods,Niveau 2:\nLes Bois
+CHOOSE_LVL_LVL3,Level 3:\nThe Cursed Graveyard,Niveau 3:\nLe Cimetière Maudit
+CODEX_LIFE,Life: ,Vie : 
+CODEX_SPEED,Speed: ,Vitesse : 
+CODEX_REWARD,Reward: ,Récompense : 
+CODEX_SPECIAL,Special: ,Spécial : 
+CREDITS_TITLE_1,"- Programming, level design, major tweaking -","- Programmation, level design, bidouillages -"
+CREDITS_TITLE_2,- Visual Assets -,- Assets Visuels -
+CREDITS_TITLE_4,- Sounds -,- Sons -
+CREDITS_TITLE_5,- Music -,- Musique -
+CREDITS_TITLE_6,- Play Testers -,- Testeur.ses -
+ENDGAME_TXT_1,"The three protectors are free !\nYou look at them as they close the portal, and rid the place of the scattered enemies.\nThe black dragon goes back to its lair in the mountains.",Les trois protecteurs sont libres !\nVous les regardez alors qu'ils ferment le portail et se débarassent des derniers ennemis épars.\nLe dragon noir retourne à sa tanière dans les montagnes.
+ENDGAME_TXT_2,"The red dragon goes back to the woods, bringing back the life, the harmony and the balance to the place.","Le dragon rouge retourne dans les bois, ramenant la vie, l'harmonie et la paix."
+ENDGAME_TXT_3.1,"You travel back to your plains, your grass and your beloved city. As you make your way home, the Green dragon flies over you, letting a powerful scream echo in the air.","Vous retournez à vos plaines, votre herbe verdoyante et votre ville. À votre arrivée, vous apercez le dragon vert qui survole la région, laissant résonner un cri puissant."
+ENDGAME_TXT_3.2,You spend a few minutes watching it vanish in the distance.\n\nYou know the nightmare is over. At least for a moment.\n\nYou feel like sleeping for a year.,Vous prenez quelques instants pour le regarder disparaître au loin.\n\nLe cauchemar est enfin terminé. Du moins pour le moment.\n\nVous pourriez hiberner une année.
+GAME_OVER_TXT,The monsters have\nconquered the country.,Les monstres\nont conquis le pays.
+MAIN_MENU_NEW,New game,Nouvelle partie
+MAIN_MENU_OPTIONS,Options,Options
+MAIN_MENU_CODEX,Codex,Codex
+MAIN_MENU_CREDITS,Credits,Générique
+MAIN_MENU_EXIT,Exit game,Quitter le jeu
+NOTIFICATION_ENCOUNTERED,encountered,découvert
+OPTIONS_VIDEO,Video,Vidéo
+OPTIONS_SCREEN_MODE,Screen mode,Affichage
+OPTIONS_FULLSCREEN,Fullscreen,Plein écran
+OPTIONS_MAXIMIZED,Maximized,Maximisé
+OPTIONS_WINDOWED,Windowed,Fenêtré
+OPTIONS_AUDIO,Audio,Audio
+OPTIONS_MASTER,Master volume,Volume principal
+OPTIONS_MUSIC,Music volume,Volume de la musique
+OPTIONS_EFFECTS,Effects volume,Volume des effets
+OPTIONS_ENV,Environment volume,Volume ambiant
+OPTIONS_GAME,Game,Jeu
+OPTIONS_TUTO,Enable tutorials,Activer le didacticiel
+OPTIONS_RESET_PROGRESS,Reset progress,Remise à zéro
+OPTIONS_RESET_TUTORIALS,Reset tutorials,Réinitialiser didacticiel
+OPTIONS_CONFIRMATION,Please confirm\nthat you wish\nto reset progress.,Confirmez que vous\nsouhaitez remettre\nà zéro.
+PAUSE_TITLE,Pause,Pause
+PAUSE_RETURN,Return to game,Retourner au jeu
+PAUSE_RESTART,Restart level,Recommencer le niveau
+PAUSE_CODEX,Codex,Codex
+PAUSE_OPTIONS,Options,Options
+PAUSE_ABANDON,Abandon,Abandonner
+WAVE_PROGRESS_END_IN,End of wave in,Fin de la vague dans
+WAVE_PROGRESS_NEXT_WAVE,Next wave in,Prochaine vague dans
+MONSTER_GOBLIN,Goblin,Gobelin
+MONSTER_ORC,Orc,Orc
+MONSTER_ORC_SHAMAN,Orc shaman,Shaman orc
+MONSTER_GREEN_DRAGON,Green dragon,Dragon vert
+MONSTER_WENDIGO,Wendigo,Wendigo
+MONSTER_RED_DEMON,Red demon,Démon rouge
+MONSTER_MINOTAUR,Minotaur,Minotaure
+MONSTER_RED_DRAGON,Red dragon,Dragon rouge
+MONSTER_SKELETON,Skeleton,Squelette
+MONSTER_GHOST_WARRIOR,Ghost warrior,Guerrier fantôme
+MONSTER_NECROMANCER,Necromancer,Nécromancien
+MONSTER_BLACK_DRAGON,Black dragon,Dragon noir
+LVL1_TITLE,Level 1\nThe City,Niveau 1\nLa Ville
+LVL2_TITLE,Level 2\nThe Woods,Niveau 2\nLes Bois
+LVL3_TITLE,Level 3\nThe Cursed Graveyard,Niveau 3\nLe Cimetière Maudit
+VICTORY_TITLE,Victory !,Victoire !
+DESC_ARCHERS,[color='#60bc4d']A[/color]rchers,[color='#60bc4d']A[/color]rchers
+DESC_MAGES,[color='#4d7cbc']M[/color]ages,[color='#4d7cbc']M[/color]ages
+DESC_FREEZE,Freezes,Gèle
+DESC_DRUIDS,[color='#7861d3']D[/color]ruids,[color='#7861d3']D[/color]ruides
+DESC_CHAINS,Chains,Liens
+DESC_CANNONS,[color='#c15b61']C[/color]annons,[color='#c15b61']C[/color]anons
+DESC_AREA,Area dmg,Dgt de zone
+LVL1_VICTORY,The green dragon is free and\nthe dark army has been defeated !\nBut the land is not safe yet !,Le dragon vert est libre et\nl'armée noire a été repoussée !\nMais le pays n'est pas encore en sécurité !
+LVL1_VICTORY_BUTTON,Go to the woods,Aller dans les bois
+LVL2_VICTORY,You have liberated the red dragon !\nYou are getting closer to the root of all evil\nThe dark army awaits you in the cemetary.,Vous avez libéré le dragon rouge !\nVous vous rapprochez de la source du mal !\nL'armée maléfique vous attend dans le cimetière !
+LVL2_VICTORY_BUTTON,Go to the cemetary,Aller au cimetière
+LVL3_VICTORY,All three protectors of the land have been freed !\nThe final forces of evil have been defeated !,Les trois protecteurs ont été délivrés du mal !\nLes dernières forces du mal sont défaites !
+LVL3_VICTORY_BUTTON,Close the portal,Fermer le portail
+FIRE_INSTANT,Instant,Instantané
+FIRE_FAST,Fast,Rapide
+FIRE_SLOW,Slow,Lent
+FIRE_VERY_SLOW,Very slow,Très lent
+TUT_HIDE,Do not show tutorials anymore,Ne plus montrer les didacticiels
+TUT_00_TITLE,Welcome to Tourtour,Bienvenue dans Tourtour
+TUT_00_TEXT,The kingdom is attacked ! The only way to save your loved ones is to build towers to kill the hordes of enemies !\n\nClick Ok to continue.,Le royaume est attaqué ! Le seul moyen de sauver vos proches est de construire des tours et de tuer les hordes d'ennemis !\n\nCliquez sur OK pour continuer.
+TUT_01_TEXT,Enemies attacking you will be spawning from this portal. They will follow the path and try to attack your castle. You have to stop them before they reach you !,Les ennemis qui vous attaquent sortiront de ce portail. Ils suivront le chemin et essaieront d'attaquer votre château. Vous devez les arrêter avant qu'ils ne vous atteignent.
+TUT_02_TEXT,"This is your life, it drops by one every\ntime an enemy passes through your defenses. If it drops to zero, you lose the game !",Ceci est votre vie. Elle baisse de un à chaque fois qu'un ennemi passe vos défenses. Si votre vie atteint zéro vous avez perdu !
+TUT_03_TEXT,This is your money. You gain money by killing enemies. You spend money by building towers.,Ceci est votre argent. Vous en gagnez lorsque vous tuez des ennemis. Vous en perdez en construisant des tours
+TUT_04_TEXT,Click on this button to build an archer tower.\n\nTowers can be placed on any free space on the map. Their firing range is shown as an outline.\n\nArcher towers fire arrows that deal a substantial amount of damage to a single target.\n\nArcher towers cost 100 gold coins.,Cliquez ici pour acheter une tour d'archers.\n\nLes tours peuvent être placées sur n'importe quel emplacement libre de la carte. Leur distance de tir est affichée en surbrillance.\n\nLes tours d'archers tirent des flèches qui font des dommages conséquents à une cible unique.\n\nElles coûtent 100 pièces d'or.
+TUT_05_TEXT,"This button allows you to build cannon towers. You cannot use it yet, because cannon towers cost 300 gold coins.\n\nTheir firing rate is much smaller than that of the archers. However, their range is increased and they deal a large amount of damage in an area of effect. These towers are perfect to tackle large groups of enemies.","Ce bouton vous permet d'acheter une tour à canons. Vous ne pouvez pas vous en servir maintenant car ces tours coûtent 300 pièces d'or.\n\nLeur vitesse de tir est très lente. Cependant, elles disposent d'une plus grande portée et infligent de grands dommages sur une zone. Ces tours sont parfaites pour attaquer de grands groupes d'ennemis."
+TUT_06_TEXT,This is the progress bar.\n\nIt shows you the time left before the next wave (when blue) and the time left before the end of the wave (when orange).,Ceci est la barre d'avancement.\n\nElle vous montre le temps qu'il reste avant la prochaine vague (en bleu) ou le temps avant la fin de la vague (en orange)
+TUT_07_TEXT,"When you feel you are ready to start the next wave instead of waiting, you can click that button to start the wave immediately.","Quand vous vous sentez prêt.e à démarrer la prochaine vague plutôt qu'attendre, vous pouvez cliquer sur ce bouton."
+TUT_08_TEXT,This icon shows you the type of enemy that will be coming out of the portal during the next wave.,Cette icône vous montre le prochain type d'ennemi à vous attaquer.
+TUT_09_TEXT,Your first enemy is a goblin. It is quite fast but does not have a lot of life. Building an archer tower should be more than sufficient to kill them.,Votre premier ennemi est un gobelin. Il est plutôt rapide mais il est aussi faible. Une tour d'archer devrait être suffisante pour le tuer.
+TUT_10_TEXT,"You've met the orcs. Orcs are more resilient than goblins, but also a little bit slower !","Vous venez de rencontrer un orc. Les orcs sont plus résistants que les gobelins, mais aussi un peu plus lents !"
+TUT_11_TEXT_1,Some enemies like have special properties. The challenge of Tourtour is to understand your enemies to plan which tower will be the most effective. ,Certains ennemis ont des pouvoirs particuliers. La difficulté de Tourtour est de comprendre quelle tour sera la plus efficace pour quel type d'ennemi.
+TUT_11_TEXT_2,"To review the properties and special skills of each enemy, press <esc> and find the Codex. Here you can review each enemy in detail while the game is paused.","Si vous voulez voir les propriétés des monstres, appuyez sur <echap> et cherchez le Codex. De là, vous pourrez passer en revues les ennemis pendant que le jeu est en pause."
+TUT_12_TEXT,"You are about to meet your first boss !\n\nThe green dragon was once the protector of the land. He is now possessed, and the only way to free him, is to fill him with arrows and cannon balls.\n\nGood luck !",Vous allez rencontrer votre premier boss !\n\nLe Dragon vert était le protecteur du pays. Il est désormais possédé et le seul moyen de le libérer est de le couvrir de flèches et de boulets de canon.\n\nBonne chance !
+TUT_13_TEXT,"For this level, you don't have the cannon tower, but now you can use the Mage tower.\n\nMage towers cost 75 gold coins and fire more slowly than archer towers. However, they also slow down enemies, and deal damage on an area.","Dans ce niveau, vous ne pouvez pas poser de tour canon mais vous avez accès aux mages.\n\nLes tour de mages coûtent 75 pièces d'or et tirent plus lentement que les archers. En revanche, elles ralentissent les ennemis et font des dégats de zone."
+TUT_14_TEXT,"Wendigos have the ability to enter burrows and exit them without going all the way around.\n\n\n\n\n\n\n\n\n\nOh, by the way. This will be the last tutorial on an enemy for this level ! You will have to find out the rest by yourself.",Les Wendigos peuvent entrer dans des terriers et ressortir de l'autre côté !\n\n\n\n\n\n\n\n\n\nOh au fait ! Ce sera le dernier didacticiel sur un ennemi pour ce niveau ! Vous devrez trouver la suite par vous même !
+TUT_15_TEXT,"In this level, you will face, among other things, armies of undead enemies. Undead are immune to material damage and can only be damaged by magic attacks.","Dans ce niveau vous ferez face, entre autres choses, à une armée de morts-vivants. Les morts-vivants sont immunisés aux dégâts matériels et ne peuvent recevoir de dommages que d'attaques magiques."
+TUT_16_TEXT,"Fortunately, your best druids have come to help ! They can channel natural energy to blast off enemies. They do little damage but can damage undead. Their firing range is infinite, and they will target multiple enemies !","Heureusement, vos meilleurs druides sont venus vous aider ! Ils peuvent concentrer les forces de la nature pour brûler les ennemis. Ils font peu de dégâts mais peuvent endommages les morts-vivants. Leur portée est infinie, et ils peuvent cibler plusieurs ennemis !"
+THANKS,Thank you for playing !,Merci d'avoir joué !

@@ -29,7 +29,9 @@ func build_codex() -> void:
 	#tween.tween_property($Opacifier, "modulate", Color(0.0, 0.0, 0.0, 0.0), Constants.MENU_TRANSITION_DURATION)
 	
 	# Reading entries in the codex file
-	var file := FileAccess.open("res://codex.json", FileAccess.READ)
+	var locale_short := TranslationServer.get_locale().substr(0, 2)
+	var fn := "codex_%s.json" % [locale_short]
+	var file := FileAccess.open("res://codex/" + fn, FileAccess.READ)
 	var file_content := file.get_as_text()
 	var json := JSON.new()
 	var error := json.parse(file_content)
@@ -84,20 +86,19 @@ func entry_clicked(key: String) -> void:
 	var type : String = entry['type']
 	if type == 'Enemy':
 		var loaded_entry := load(entry['scene'])
-		print(loaded_entry)
 		var scene : Enemy = loaded_entry.instantiate()
-		elt_desc2.text = 'Life : %d' % [scene.life]
-		elt_desc3.text = 'Speed : %d' % [scene.speed]
+		elt_desc2.text = tr('CODEX_LIFE') + '%d' % [scene.life]
+		elt_desc3.text = tr('CODEX_SPEED') + '%d' % [scene.speed]
 		elt_desc2.visible = true
 		elt_desc3.visible = true
 		if scene.bounty > 0:
-			elt_desc4.text = 'Reward : %d' % [scene.bounty]
+			elt_desc4.text = tr('CODEX_REWARD') + '%d' % [scene.bounty]
 			elt_desc4.visible = true
 		else:
 			elt_desc4.text = ''
 			elt_desc4.visible = false
 		if 'note' in entry:
-			elt_desc5.text = 'Special : ' + entry['note']
+			elt_desc5.text = tr('CODEX_SPECIAL') + entry['note']
 			elt_desc5.visible = true
 		else:
 			elt_desc5.text = ''

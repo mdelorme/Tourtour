@@ -94,9 +94,10 @@ func _master_drag_changed(value: float) -> void:
 func _on_cancel_button_pressed() -> void:
 	var selected_id : int = %ScreenModeOptions.get_selected_id()
 	var mode_selected : String = %ScreenModeOptions.get_item_text(selected_id)
-	var screen_mode : String = {'0': 'Fullscreen',
-								'1': 'Maximized',
-								'2': 'Windowed'}[Progress.options['screen_mode']]
+	var screen_mode_dict : Dictionary = {0: 'OPTIONS_FULLSCREEN',
+										 1: 'OPTIONS_MAXIMIZED',
+										 2: 'OPTIONS_WINDOWED'}
+	var screen_mode : String = screen_mode_dict[int(Progress.options['screen_mode'])]
 
 	if mode_selected != screen_mode: 
 		change_screen_mode(screen_mode)
@@ -148,9 +149,9 @@ func _confirm_reset_progress() -> void:
 func change_screen_mode(screen_mode: String) -> void:
 	var new_window_mode : DisplayServer.WindowMode = DisplayServer.window_get_mode()
 	match screen_mode:
-		'Fullscreen': new_window_mode = DisplayServer.WindowMode.WINDOW_MODE_FULLSCREEN
-		'Maximized':  new_window_mode = DisplayServer.WindowMode.WINDOW_MODE_MAXIMIZED
-		'Windowed':   new_window_mode = DisplayServer.WindowMode.WINDOW_MODE_WINDOWED
+		'OPTIONS_FULLSCREEN': new_window_mode = DisplayServer.WindowMode.WINDOW_MODE_FULLSCREEN
+		'OPTIONS_MAXIMIZED':  new_window_mode = DisplayServer.WindowMode.WINDOW_MODE_MAXIMIZED
+		'OPTIONS_WINDOWED':   new_window_mode = DisplayServer.WindowMode.WINDOW_MODE_WINDOWED
 		
 	DisplayServer.window_set_mode(new_window_mode)
 		

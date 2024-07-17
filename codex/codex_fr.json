@@ -1,0 +1,127 @@
+{
+	"entries": {
+		"goblin": {
+			"name": "Gobelin",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_goblin.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/goblin.tscn",
+			"description": "Petit ennemi avec peu de vie. Chair à canon pour l'armée maléfique !"
+		},
+		"orc": {
+			"name": "Orc",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_orc.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/orc.tscn",
+			"description": "Combattants principaux de l'armée maléfique, les Orcs sont plus résistants que les gobelins mais aussi plus lents."
+		},
+		"orc_shaman": {
+			"name": "Shaman Orc",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_orc_shaman.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/orc_shaman.tscn",
+			"description": "Les plus intelligents des orcs deviennent des shamans. Immunisés contre les éléments ils sont plus résistants que les autres combattants.",
+			"note": "Immunisés au gel et aux druides"
+		},
+		"green_dragon": {
+			"name": "Dragon Vert",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_green_dragon.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/green_dragon.tscn",
+			"description": "Ancien protecteur du pays, le Dragon vert est désormais possédé par une force maléfique."
+		},
+		"red_demon": {
+			"name": "Démon Rouge",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_red_demon.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/red_demon.tscn",
+			"description": "Les Démons rouges sont des monstres vivant loin sous la surface de la terre, près des grands océans de magma. Ils sont mauvais et courent très vite.",
+			"note": "Immunisés aux canons"
+		},
+		"minotaur": {
+			"name": "Minotaure",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_minotaur.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/minotaur.tscn",
+			"description": "Les Minotaures sont extrêmement résistants malgré leur lenteur. Ils peuvent supporter une grande quantité de dégâts avant de mourir."
+		},
+		"wendigo": {
+			"name": "Wendigo",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_wendigo.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/wendigo.tscn",
+			"description": "Les Wendigos sont des esprits de la forêt qui peuvent se déplacer furtivement en creusant sous le sol.",
+			"note": "Les Wendigos peuvent utiliser les tunnels pour traverser de grandes distances à couvert."
+		},
+		"red_dragon": {
+			"name": "Dragon Rouge",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_red_dragon.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/red_dragon.tscn",
+			"description": "Depuis que les protecteurs sont possédés par les forces maléfiques, le dragon rouge parcourt la forêt tel une sentinelle. Il appelle les forces maléfiques à la rescousse dès qu'il détecte une menace."
+		},
+		"skeleton": {
+			"name": "Squelette",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_skeleton.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/skeleton.tscn",
+			"description": "Dans le cimetière maudit, les nécromanciens ressucitent les corps exumés des défunts pour créer une armée. Ces morts sont lents mais résistent aux attaques physiques !",
+			"note": "Les squelettes n'ont ni organes, ni peau. Ils sont donc immunisés aux flèches."
+		},
+		"necromancer": {
+			"name": "Necromancien",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_necromancer.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/necromancer.tscn",
+			"description": "Ces prêtres noirs sont en haut de la chaîne alimentaire de l'armée noire. Ne soyez pas bernés par leur aspect. Leurs pouvoirs sont réellement terrifiants !",
+			"note": "Les nécromanciens peuvent invoquer des squelettes et des guerriers fantômes. Ne traînez pas pour les achever avant d'être dépassé !"
+		},
+		"ghost_warrior": {
+			"name": "Guerrier Fantôme",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_ghost_warrior.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/ghost_warrior.tscn",
+			"description": "Autrefois de vaillants défenseurs du pays, les guerriers fantômes ont été rappelés à la vie par les nécromanciens pour servir leur desseins maléfiques.",
+			"note": "Les guerriers fantômes sont des être éthérés immunisés aux flèches et aux canons."
+		},
+		"black_dragon": {
+			"name": "Dragon Noir",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_black_dragon.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/black_dragon.tscn",
+			"description": "Le Dragon noir est le dernier des protecteurs. Il veillait sur le cimetière et le repos des morts. Depuis qu'il est possédé, toutes sortes d'abominations errent entre les tombes et personnes n'ose plus s'aventurer dans le cimetière."
+		},
+		"level1": {
+			"name": "La Ville",
+			"type": "Level",
+			"image": "res://assets/visual/codex/lvl1.png",
+			"img_size": 128,
+			"description": "La ville est tout ce que vous avez toujours connu. C'est là que vous êtes né.e et que vous avez passé votre vie. C'est peut être pour ça que vous souhaitez la défendre à tout prix."
+		},
+		"level2": {
+			"name": "Les Bois",
+			"type": "Level",
+			"image": "res://assets/visual/codex/lvl2.png",
+			"img_size": 128,
+			"description": "Les bois qui entourent la ville était autrefois un lieu de paix et d'harmonie. Étant obligés de les traverser pour atteindre le cimetière, les bois sont désormais hantés par des créatures maléfiques et des esprits néfastes."
+		},
+		"level3": {
+			"name": "Le Cimetière Maudit",
+			"type": "Level",
+			"image": "res://assets/visual/codex/lvl3.png",
+			"img_size": 128,
+			"description": "Autrefois, les gens venaient ici honorer les morts. Après avoir été profané par le culte de la fin cet endroit est désormais maudit et personne n'ose plus s'y aventurer. Et pour de bonnes raisons : l'arche de pierre séculaire semble désormais ouvrir un passage vers un autre monde."
+		}
+	}
+}

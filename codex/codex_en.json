@@ -1,0 +1,127 @@
+{
+	"entries": {
+		"goblin": {
+			"name": "Goblin",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_goblin.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/goblin.tscn",
+			"description": "Small enemy with not much life.\nCannon fodder for the evil army !"
+		},
+		"orc": {
+			"name": "Orc",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_orc.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/orc.tscn",
+			"description": "Main fighter of the evil army, the orc is stronger than a goblin but slightly slower."
+		},
+		"orc_shaman": {
+			"name": "Orc Shaman",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_orc_shaman.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/orc_shaman.tscn",
+			"description": "The most intelligent orcs become shamans. Immune to the elements they make more resistant fighters.",
+			"note": "Immune to freezing and druids"
+		},
+		"green_dragon": {
+			"name": "Green Dragon",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_green_dragon.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/green_dragon.tscn",
+			"description": "Once the protector of the land, the Green Dragon is now possessed by the evil forces."
+		},
+		"red_demon": {
+			"name": "Red Demon",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_red_demon.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/red_demon.tscn",
+			"description": "Red Demons are evil spawns that live deep below the surface, close to the great magma ocean. They are mean and very fast.",
+			"note": "Immune to cannon"
+		},
+		"minotaur": {
+			"name": "Minotaur",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_minotaur.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/minotaur.tscn",
+			"description": "Minotaurs are extremely resilient albeit very slow beings. They can take quite a beating before falling."
+		},
+		"wendigo": {
+			"name": "Wendigo",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_wendigo.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/wendigo.tscn",
+			"description": "Wendigos are spirits of the forest than can move quickly by digging tunnels.",
+			"note": "Wendigos can use burrowing tunnels to cover long distances without being harmed."
+		},
+		"red_dragon": {
+			"name": "Red Dragon",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_red_dragon.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/red_dragon.tscn",
+			"description": "Since the three protectors have been possessed by the evil forces, the red dragon roams the forest as a sentinel. Calling on the evil forces when it detects enemies."
+		},
+		"skeleton": {
+			"name": "Skeleton",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_skeleton.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/skeleton.tscn",
+			"description": "In the cursed graveyard necromancers have been raising the corpses of the dead to build a mighty army. These are slow but unrelentless enemies.",
+			"note": "Skeletons don't have organs or skin. They are thus immune to arrows."
+		},
+		"necromancer": {
+			"name": "Necromancer",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_necromancer.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/necromancer.tscn",
+			"description": "These dark priests are the top of the food chain of the dark army. Don't be fooled by their aspect, their powers are truly terrifying !",
+			"note": "Necromancers can summon skeleton and ghost warriors to fight are their sides. Kill them quickly before being overrun."
+		},
+		"ghost_warrior": {
+			"name": "Ghost Warrior",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_ghost_warrior.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/ghost_warrior.tscn",
+			"description": "Once a valiant defender of the land, the ghost warrior has been recalled by necromancers to serve the evil forces !",
+			"note": "Ghost warriors are ethereal beings that are immune to arrows AND cannon explosions."
+		},
+		"black_dragon": {
+			"name": "Black Dragon",
+			"type": "Enemy",
+			"image": "res://assets/visual/ui/icons/icon_black_dragon.png",
+			"img_size": 32,
+			"scene": "res://scenes/enemies/black_dragon.tscn",
+			"description": "The black dragon is the last of the three protectors. He used to protect the graveyard and keep an eye on the dead. Now that he has turned, all sorts of abominations roam between the graves and nobody dares to wander in the graveyard anymore."
+		},
+		"level1": {
+			"name": "The City",
+			"type": "Level",
+			"image": "res://assets/visual/codex/lvl1.png",
+			"img_size": 128,
+			"description": "The city is all you've ever known. It is where you were born, and where you spent your whole life. That may be why you wish so hard to defend it."
+		},
+		"level2": {
+			"name": "The Woods",
+			"type": "Level",
+			"image": "res://assets/visual/codex/lvl2.png",
+			"img_size": 128,
+			"description": "The woods bordering the City were once a safe haven. Being the only way to the cursed graveyard, it is now haunted by foul creatures and evil spirits."
+		},
+		"level3": {
+			"name": "The Cursed Graveyard",
+			"type": "Level",
+			"image": "res://assets/visual/codex/lvl3.png",
+			"img_size": 128,
+			"description": "In the old days, people use to come here to honour the dead. But after being desacralized by the cult of the end, this place is now cursed and no one dares to venture here. For a good reason, the secular stone arch seems to be opening a passage to another world now."
+		}
+	}
+}

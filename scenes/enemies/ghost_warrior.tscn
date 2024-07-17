@@ -7,7 +7,7 @@
 [node name="Enemy" instance=ExtResource("1_kedyd")]
 modulate = Color(1, 1, 1, 0.501961)
 icon = ExtResource("2_rqf5r")
-monster_name = "Ghost Warrior"
+monster_name = "MONSTER_GHOST_WARRIOR"
 life = 1200
 speed = 30.0
 frames = ExtResource("3_5kmmi")

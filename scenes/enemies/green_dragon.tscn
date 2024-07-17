@@ -16,7 +16,7 @@ scale_max = 0.5
 
 [node name="Enemy" instance=ExtResource("1_hmn7l")]
 icon = ExtResource("2_620ju")
-monster_name = "Green Dragon"
+monster_name = "MONSTER_GREEN_DRAGON"
 life = 50000
 speed = 30.0
 frames = ExtResource("3_hkxoj")

@@ -51,9 +51,7 @@ offset_bottom = 187.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_dpvno")
 theme_override_font_sizes/font_size = 25
-text = "The three protectors are free !
-You look at them as they close the portal, and rid the place of the scattered enemies.
-The black dragon goes back to its lair in the mountains"
+text = "ENDGAME_TXT_1"
 autowrap_mode = 3
 
 [node name="Ch2" type="TextureRect" parent="."]
@@ -78,7 +76,7 @@ offset_bottom = 627.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_dpvno")
 theme_override_font_sizes/font_size = 25
-text = "The red dragon goes back to the woods, bringing back the life, the harmony and the balance to the place"
+text = "ENDGAME_TXT_2"
 autowrap_mode = 3
 
 [node name="Ch3" type="TextureRect" parent="."]
@@ -109,7 +107,7 @@ theme_override_constants/outline_size = 7
 theme_override_constants/shadow_outline_size = 3
 theme_override_fonts/font = ExtResource("2_dpvno")
 theme_override_font_sizes/font_size = 25
-text = "You travel back to your plains, your grass and your beloved city. As you make your way home, the Green dragon flies over you. Letting a powerful scream echo in the air."
+text = "ENDGAME_TXT_3.1"
 autowrap_mode = 3
 
 [node name="LabelCh3_2" type="Label" parent="Ch3"]
@@ -130,11 +128,7 @@ theme_override_constants/outline_size = 7
 theme_override_constants/shadow_outline_size = 3
 theme_override_fonts/font = ExtResource("2_dpvno")
 theme_override_font_sizes/font_size = 25
-text = "You spend a few minutes watching it vanish in the distance. 
-
-You know the nightmare is over. At least for a moment.
-
-You feel like sleeping for a year."
+text = "ENDGAME_TXT_3.2"
 autowrap_mode = 3
 
 [node name="MainBackground" type="TextureRect" parent="."]
@@ -166,6 +160,10 @@ autoplay = true
 visible = false
 layout_mode = 0
 anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
 game_finished = true
 
 [connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

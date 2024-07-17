@@ -87,7 +87,7 @@ horizontal_alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 30
-text = "Video"
+text = "OPTIONS_VIDEO"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -96,7 +96,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 20
-text = "Screen mode"
+text = "OPTIONS_SCREEN_MODE"
 
 [node name="ScreenModeOptions" type="OptionButton" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
@@ -107,11 +107,11 @@ theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 20
 item_count = 3
 selected = 0
-popup/item_0/text = "Fullscreen"
+popup/item_0/text = "OPTIONS_FULLSCREEN"
 popup/item_0/id = 0
-popup/item_1/text = "Maximized"
+popup/item_1/text = "OPTIONS_MAXIMIZED"
 popup/item_1/id = 1
-popup/item_2/text = "Windowed"
+popup/item_2/text = "OPTIONS_WINDOWED"
 popup/item_2/id = 2
 
 [node name="Control2" type="Control" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
@@ -122,7 +122,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 30
-text = "Audio"
+text = "OPTIONS_AUDIO"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -134,7 +134,7 @@ layout_mode = 2
 size_flags_horizontal = 2
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 20
-text = "Master volume"
+text = "OPTIONS_MASTER"
 
 [node name="MasterSlider" type="HSlider" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
@@ -156,7 +156,7 @@ layout_mode = 2
 size_flags_horizontal = 2
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 20
-text = "Music volume"
+text = "OPTIONS_MUSIC"
 
 [node name="MusicSlider" type="HSlider" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer3"]
 unique_name_in_owner = true
@@ -178,7 +178,7 @@ layout_mode = 2
 size_flags_horizontal = 2
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 20
-text = "Effects volume"
+text = "OPTIONS_EFFECTS"
 
 [node name="EffectsSlider" type="HSlider" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer4"]
 unique_name_in_owner = true
@@ -200,7 +200,7 @@ layout_mode = 2
 size_flags_horizontal = 2
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 20
-text = "Environment volume"
+text = "OPTIONS_ENV"
 
 [node name="EnvSlider" type="HSlider" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer5"]
 unique_name_in_owner = true
@@ -220,7 +220,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 30
-text = "Game"
+text = "OPTIONS_GAME"
 
 [node name="EnableTutorials" type="CheckBox" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -228,7 +228,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 20
 button_pressed = true
-text = "Enable tutorials"
+text = "OPTIONS_TUTO"
 
 [node name="HBoxContainer7" type="HBoxContainer" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -239,7 +239,7 @@ layout_mode = 2
 focus_mode = 0
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 20
-text = "Reset progress"
+text = "OPTIONS_RESET_PROGRESS"
 
 [node name="ResetTutorialsButton" type="Button" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer7"]
 unique_name_in_owner = true
@@ -248,7 +248,7 @@ layout_mode = 2
 focus_mode = 0
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 20
-text = "Reset tutorials"
+text = "OPTIONS_RESET_TUTORIALS"
 
 [node name="Control3" type="Control" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 25)
@@ -264,16 +264,14 @@ custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 20
-text = "Apply
-"
+text = "UI_APPLY"
 
 [node name="CancelButton" type="Button" parent="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer6"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 20
-text = "Cancel
-"
+text = "UI_CANCEL"
 
 [node name="TestSounds" type="Node" parent="."]
 
@@ -321,9 +319,7 @@ offset_right = 358.0
 offset_bottom = 113.0
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 30
-text = "Please confirm 
-that you wish 
-to reset progress"
+text = "OPTIONS_CONFIRMATION"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -336,7 +332,7 @@ offset_right = 167.0
 offset_bottom = 183.0
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 20
-text = "Reset"
+text = "UI_RESET"
 
 [node name="CancelResetButton" type="Button" parent="ConfirmationPanel/ConfirmationPanel2"]
 custom_minimum_size = Vector2(100, 30)
@@ -347,7 +343,7 @@ offset_right = 349.0
 offset_bottom = 183.0
 theme_override_fonts/font = ExtResource("2_wyukh")
 theme_override_font_sizes/font_size = 20
-text = "Cancel"
+text = "UI_CANCEL"
 
 [connection signal="item_selected" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer/ScreenModeOptions" to="." method="_on_screen_mode_changed"]
 [connection signal="drag_ended" from="MarginContainer/OptionMenu/MarginContainer/VBoxContainer/HBoxContainer2/MasterSlider" to="." method="_master_drag_ended"]

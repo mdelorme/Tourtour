@@ -7,11 +7,14 @@
 
 [node name="Enemy" instance=ExtResource("1_5o60h")]
 icon = ExtResource("2_ayup7")
-monster_name = "Goblin"
+monster_name = "MONSTER_GOBLIN"
 life = 400
 speed = 100.0
 frames = ExtResource("3_y35o2")
 bounty = 4
+
+[node name="AnimatedSprite" parent="." index="0"]
+animation = &"default"
 
 [node name="DyingSound" parent="Sounds" index="0"]
 stream = ExtResource("4_gfky5")

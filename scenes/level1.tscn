@@ -221,7 +221,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("29_siu3v")
 theme_override_font_sizes/font_size = 22
-text = "Towers"
+text = "UI_TOWERS"
 script = ExtResource("31_k8gu8")
 
 [node name="ArcherTowerButton" type="TextureButton" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
@@ -268,13 +268,6 @@ theme_override_constants/separation = 10
 [node name="Control" type="Control" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("29_siu3v")
-theme_override_font_sizes/font_size = 22
-text = "Progress"
-vertical_alignment = 1
-
 [node name="WaveProgressBar" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("21_eogl7")]
 layout_mode = 2
 step = 0.0
@@ -284,7 +277,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("29_siu3v")
 theme_override_font_sizes/font_size = 22
-text = "Next"
+text = "UI_NEXT"
 vertical_alignment = 1
 
 [node name="NextWaveIndicator" type="TextureRect" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
@@ -326,7 +319,7 @@ custom_minimum_size = Vector2(55, 0)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("29_siu3v")
 bbcode_enabled = true
-text = "[color='#60bc4d']A[/color]rchers"
+text = "DESC_ARCHERS"
 scroll_active = false
 autowrap_mode = 0
 text_direction = 1
@@ -423,7 +416,7 @@ custom_minimum_size = Vector2(55, 0)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("29_siu3v")
 bbcode_enabled = true
-text = "[color='#4d7cbc']M[/color]ages"
+text = "DESC_MAGES"
 scroll_active = false
 autowrap_mode = 0
 text_direction = 1
@@ -494,7 +487,7 @@ stretch_mode = 2
 [node name="MageBonusLabel" type="Label" parent="CanvasLayer/MagesDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer5"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("29_siu3v")
-text = "Freezes"
+text = "DESC_FREEZE"
 vertical_alignment = 1
 
 [node name="DruidsDescriptionPanel" type="Panel" parent="CanvasLayer"]
@@ -531,7 +524,7 @@ custom_minimum_size = Vector2(55, 0)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("29_siu3v")
 bbcode_enabled = true
-text = "[color='#7861d3']D[/color]ruids"
+text = "DESC_DRUIDS"
 scroll_active = false
 autowrap_mode = 0
 text_direction = 1
@@ -623,7 +616,7 @@ custom_minimum_size = Vector2(55, 0)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("29_siu3v")
 bbcode_enabled = true
-text = "[color='#c15b61']C[/color]annons"
+text = "DESC_CANNONS"
 scroll_active = false
 autowrap_mode = 0
 text_direction = 1
@@ -694,7 +687,7 @@ stretch_mode = 2
 [node name="CannonsBonusLabel" type="Label" parent="CanvasLayer/CannonsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer5"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("29_siu3v")
-text = "Area dmg"
+text = "DESC_AREA"
 vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/CannonsDescriptionPanel/MarginContainer/VBoxContainer"]
@@ -782,8 +775,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 44
-text = "Level 1
-The City"
+text = "LVL1_TITLE"
 horizontal_alignment = 1
 
 [node name="Opacifier" type="ColorRect" parent="CanvasLayer"]
@@ -841,25 +833,23 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 36
-text = "Victory !"
+text = "VICTORY_TITLE"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="CanvasLayer/VictoryPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 20
-text = "The green dragon is free and 
-the dark army has been defeated ! 
-But the land is not safe yet !"
+text = "LVL1_VICTORY"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VictoryPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 10
 alignment = 1
 
 [node name="NextLevel" type="Button" parent="CanvasLayer/VictoryPanel/MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(220, 40)
+custom_minimum_size = Vector2(280, 40)
 layout_mode = 2
 focus_mode = 0
 theme_override_fonts/font = ExtResource("54_cyp0j")
@@ -867,8 +857,7 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_i3car")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pegei")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_f00u1")
-text = "Go to the woods
-"
+text = "LVL1_VICTORY_BUTTON"
 
 [node name="DebugPanel" type="PanelContainer" parent="CanvasLayer"]
 visible = false
@@ -944,6 +933,7 @@ offset_left = 7.0
 offset_top = 191.0
 offset_right = 251.0
 offset_bottom = 215.0
+text = "TUT_HIDE"
 
 [node name="Label" type="Label" parent="CanvasLayer/Tutorials/00_init"]
 layout_mode = 0
@@ -953,7 +943,8 @@ offset_right = 297.0
 offset_bottom = 38.0
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 22
-text = "Welcome to Tourtour !"
+text = "TUT_00_TITLE"
+horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Tutorials/00_init"]
 layout_mode = 0
@@ -963,43 +954,43 @@ offset_right = 363.0
 offset_bottom = 181.0
 theme_override_fonts/normal_font = ExtResource("54_cyp0j")
 theme_override_font_sizes/normal_font_size = 22
-text = "The kingdom is attacked ! The only way to save your loved ones is to build towers to kill the hordes of enemies !
-
-Click Ok to continue"
+text = "TUT_00_TEXT"
 
 [node name="01_portal" parent="CanvasLayer/Tutorials" instance=ExtResource("33_26m6u")]
 visible = false
 z_as_relative = false
 layout_mode = 1
 offset_left = 62.0
-offset_top = 89.0
+offset_top = 52.0
 offset_right = 402.0
 offset_bottom = 227.0
 unique_id = "01_portal"
 
 [node name="Button" parent="CanvasLayer/Tutorials/01_portal" index="0"]
 offset_left = 337.0
-offset_top = 139.0
+offset_top = 176.0
 offset_right = 368.0
-offset_bottom = 170.0
+offset_bottom = 207.0
 
 [node name="CheckBox" parent="CanvasLayer/Tutorials/01_portal" index="1"]
 offset_left = 8.0
-offset_top = 145.0
+offset_top = 182.0
 offset_right = 252.0
-offset_bottom = 169.0
+offset_bottom = 206.0
+text = "TUT_HIDE"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Tutorials/01_portal"]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 18.0
 offset_right = 362.0
-offset_bottom = 130.0
+offset_bottom = 170.0
 theme_override_fonts/normal_font = ExtResource("54_cyp0j")
 theme_override_font_sizes/normal_font_size = 22
-text = "Enemies attacking you will be spawning from this portal. They will follow the path and try to attack your castle. You have to stop them before they reach you !"
+text = "TUT_01_TEXT"
 
 [node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/01_portal"]
+position = Vector2(0, 37)
 points = PackedVector2Array(171, 397, 187, 175)
 width = 4.0
 default_color = Color(0.976471, 0.886275, 0.513726, 1)
@@ -1032,6 +1023,7 @@ offset_left = 8.0
 offset_top = 122.0
 offset_right = 252.0
 offset_bottom = 146.0
+text = "TUT_HIDE"
 
 [node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/02_life"]
 points = PackedVector2Array(21, -98, 116, 2)
@@ -1047,8 +1039,7 @@ offset_right = 405.0
 offset_bottom = 110.0
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 22
-text = "This is your life, it drops by one every
-time an enemy passes through your defenses. If it drops to zero, you lose the game !"
+text = "TUT_02_TEXT"
 autowrap_mode = 2
 
 [node name="03_money" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
@@ -1077,6 +1068,7 @@ offset_left = 7.0
 offset_top = 96.0
 offset_right = 251.0
 offset_bottom = 120.0
+text = "TUT_HIDE"
 
 [node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/03_money"]
 points = PackedVector2Array(93, -97, 116, 2)
@@ -1093,7 +1085,7 @@ offset_right = 405.0
 offset_bottom = 86.0
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 22
-text = "This is your money. You gain money by killing enemies. You spend money by building towers."
+text = "TUT_03_TEXT"
 autowrap_mode = 2
 
 [node name="04_archers" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
@@ -1104,7 +1096,7 @@ anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 30.0
-offset_top = 120.0
+offset_top = 87.0
 offset_right = 445.0
 offset_bottom = 480.0
 grow_horizontal = 1
@@ -1113,18 +1105,19 @@ unique_id = "04_archers"
 
 [node name="Button" parent="CanvasLayer/Tutorials/04_archers" index="0"]
 offset_left = 374.0
-offset_top = 320.0
+offset_top = 352.0
 offset_right = 405.0
-offset_bottom = 351.0
+offset_bottom = 383.0
 
 [node name="CheckBox" parent="CanvasLayer/Tutorials/04_archers" index="1"]
 offset_left = 7.0
-offset_top = 327.0
+offset_top = 359.0
 offset_right = 251.0
-offset_bottom = 351.0
+offset_bottom = 383.0
+text = "TUT_HIDE"
 
 [node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/04_archers"]
-position = Vector2(68, 222)
+position = Vector2(68, 255)
 points = PackedVector2Array(54, 136, 8, 177)
 width = 4.0
 default_color = Color(0.976471, 0.886275, 0.513726, 1)
@@ -1139,13 +1132,7 @@ offset_right = 405.0
 offset_bottom = 86.0
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 22
-text = "Click on this button to build an archer tower. 
-
-Towers can be placed on any free space on the map. Their firing range is shown as an outline.
-
-Archer towers fire arrows that deal a substantial amount of damage to a single target.
-
-Archer towers cost 100 gold coins"
+text = "TUT_04_TEXT"
 autowrap_mode = 2
 
 [node name="05_cannons" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
@@ -1156,7 +1143,7 @@ anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 39.0
-offset_top = 144.0
+offset_top = 101.0
 offset_right = 454.0
 offset_bottom = 444.0
 grow_horizontal = 1
@@ -1165,19 +1152,20 @@ unique_id = "05_cannons"
 
 [node name="Button" parent="CanvasLayer/Tutorials/05_cannons" index="0"]
 offset_left = 373.0
-offset_top = 261.0
+offset_top = 304.0
 offset_right = 404.0
-offset_bottom = 292.0
+offset_bottom = 335.0
 
 [node name="CheckBox" parent="CanvasLayer/Tutorials/05_cannons" index="1"]
 offset_left = 9.0
-offset_top = 268.0
+offset_top = 311.0
 offset_right = 253.0
-offset_bottom = 292.0
+offset_bottom = 335.0
+text = "TUT_HIDE"
 
 [node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/05_cannons"]
-position = Vector2(68, 222)
-points = PackedVector2Array(115, 76, 50, 150)
+position = Vector2(68, 265)
+points = PackedVector2Array(115, 76, 40, 150)
 width = 4.0
 default_color = Color(0.976471, 0.886275, 0.513726, 1)
 joint_mode = 2
@@ -1191,9 +1179,7 @@ offset_right = 405.0
 offset_bottom = 86.0
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 22
-text = "This button allows you to build cannon towers. You cannot use it yet, because cannon towers cost 300 gold coins.
-
-Their firing rate is much smaller than that of the archers. However, their range is increased and they deal a large amount of damage in an area of effect. These towers are perfect to tackle large groups of enemies."
+text = "TUT_05_TEXT"
 autowrap_mode = 2
 
 [node name="06_progress_wave" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
@@ -1222,6 +1208,7 @@ offset_left = 10.0
 offset_top = 183.0
 offset_right = 254.0
 offset_bottom = 207.0
+text = "TUT_HIDE"
 
 [node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/06_progress_wave"]
 position = Vector2(123, 136)
@@ -1236,12 +1223,10 @@ layout_mode = 0
 offset_left = 16.0
 offset_top = 11.0
 offset_right = 405.0
-offset_bottom = 86.0
+offset_bottom = 171.0
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 22
-text = "This is the progress bar. 
-
-It shows you the time left before the next wave (when orange) and the time left before the end of the wave (when blue)."
+text = "TUT_06_TEXT"
 autowrap_mode = 2
 
 [node name="07_skip_wave" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
@@ -1270,6 +1255,7 @@ offset_left = 11.0
 offset_top = 128.0
 offset_right = 255.0
 offset_bottom = 152.0
+text = "TUT_HIDE"
 
 [node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/07_skip_wave"]
 position = Vector2(236, 86)
@@ -1284,10 +1270,10 @@ layout_mode = 0
 offset_left = 16.0
 offset_top = 11.0
 offset_right = 405.0
-offset_bottom = 86.0
+offset_bottom = 121.0
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 22
-text = "When you feel you are ready to start the next wave instead of waiting, you can click that button to start the wave immediately."
+text = "TUT_07_TEXT"
 autowrap_mode = 2
 
 [node name="08_next_wave" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
@@ -1316,10 +1302,11 @@ offset_left = 11.0
 offset_top = 96.0
 offset_right = 255.0
 offset_bottom = 120.0
+text = "TUT_HIDE"
 
 [node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/08_next_wave"]
 position = Vector2(243, 55)
-points = PackedVector2Array(115, 74, 152, 189)
+points = PackedVector2Array(62, 75, 91, 185)
 width = 4.0
 default_color = Color(0.976471, 0.886275, 0.513726, 1)
 joint_mode = 2
@@ -1333,7 +1320,7 @@ offset_right = 405.0
 offset_bottom = 86.0
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 22
-text = "This icon shows you the type of enemy that will be coming out of the portal during the next wave."
+text = "TUT_08_TEXT"
 autowrap_mode = 2
 
 [node name="09_goblins" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
@@ -1350,7 +1337,7 @@ offset_bottom = 360.0
 grow_horizontal = 1
 grow_vertical = 1
 trigger_type = 1
-encounter_name = "Goblin"
+encounter_name = "MONSTER_GOBLIN"
 unique_id = "09_goblins"
 
 [node name="Button" parent="CanvasLayer/Tutorials/09_goblins" index="0"]
@@ -1364,6 +1351,7 @@ offset_left = 7.0
 offset_top = 130.0
 offset_right = 251.0
 offset_bottom = 154.0
+text = "TUT_HIDE"
 
 [node name="Label" type="Label" parent="CanvasLayer/Tutorials/09_goblins"]
 layout_mode = 0
@@ -1373,7 +1361,7 @@ offset_right = 405.0
 offset_bottom = 86.0
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 22
-text = "Your first enemy is a goblin. It is quite fast but does not have a lot of life. Building an archer tower should be more than sufficient to kill them."
+text = "TUT_09_TEXT"
 autowrap_mode = 2
 
 [node name="10_orcs" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
@@ -1390,7 +1378,7 @@ offset_bottom = 329.0
 grow_horizontal = 1
 grow_vertical = 1
 trigger_type = 1
-encounter_name = "Orc"
+encounter_name = "MONSTER_ORC"
 unique_id = "10_orcs"
 
 [node name="Button" parent="CanvasLayer/Tutorials/10_orcs" index="0"]
@@ -1404,6 +1392,7 @@ offset_left = 12.0
 offset_top = 97.0
 offset_right = 256.0
 offset_bottom = 121.0
+text = "TUT_HIDE"
 
 [node name="Label" type="Label" parent="CanvasLayer/Tutorials/10_orcs"]
 layout_mode = 0
@@ -1413,7 +1402,7 @@ offset_right = 405.0
 offset_bottom = 86.0
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 22
-text = "You've met the orcs. Orcs are more resilient than goblins, but also a little bit slower !"
+text = "TUT_10_TEXT"
 autowrap_mode = 2
 
 [node name="11_orc_shaman" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
@@ -1430,7 +1419,7 @@ offset_bottom = 491.0
 grow_horizontal = 1
 grow_vertical = 1
 trigger_type = 1
-encounter_name = "Orc Shaman"
+encounter_name = "MONSTER_ORC_SHAMAN"
 unique_id = "11_orc_shaman"
 
 [node name="Button" parent="CanvasLayer/Tutorials/11_orc_shaman" index="0"]
@@ -1444,6 +1433,7 @@ offset_left = 12.0
 offset_top = 410.0
 offset_right = 256.0
 offset_bottom = 434.0
+text = "TUT_HIDE"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/Tutorials/11_orc_shaman"]
 layout_mode = 0
@@ -1462,9 +1452,8 @@ offset_top = 11.0
 offset_right = 405.0
 offset_bottom = 86.0
 theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "Some enemies like have special properties. The challenge of Tourtour is to understand your enemies to plan which tower will be the most effective. 
-"
+theme_override_font_sizes/font_size = 20
+text = "TUT_11_TEXT_1"
 autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="CanvasLayer/Tutorials/11_orc_shaman"]
@@ -1474,8 +1463,8 @@ offset_top = 127.0
 offset_right = 199.0
 offset_bottom = 399.0
 theme_override_fonts/font = ExtResource("54_cyp0j")
-theme_override_font_sizes/font_size = 22
-text = "To review the properties and special skills of each enemy, press <esc> and find the Codex. Here you can review each enemy in detail while the game is paused."
+theme_override_font_sizes/font_size = 20
+text = "TUT_11_TEXT_2"
 autowrap_mode = 2
 
 [node name="12_green_dragon" parent="CanvasLayer/Tutorials" instance=ExtResource("34_j3i61")]
@@ -1492,7 +1481,7 @@ offset_bottom = 449.0
 grow_horizontal = 1
 grow_vertical = 1
 trigger_type = 1
-encounter_name = "Green Dragon"
+encounter_name = "MONSTER_GREEN_DRAGON"
 unique_id = "12_green_dragon"
 
 [node name="Button" parent="CanvasLayer/Tutorials/12_green_dragon" index="0"]
@@ -1506,6 +1495,7 @@ offset_left = 9.0
 offset_top = 281.0
 offset_right = 253.0
 offset_bottom = 305.0
+text = "TUT_HIDE"
 
 [node name="Label" type="Label" parent="CanvasLayer/Tutorials/12_green_dragon"]
 layout_mode = 0
@@ -1515,11 +1505,7 @@ offset_right = 405.0
 offset_bottom = 86.0
 theme_override_fonts/font = ExtResource("54_cyp0j")
 theme_override_font_sizes/font_size = 22
-text = "You are about to meet your first boss !
-
-The green dragon was once the protector of the land. He is now possessed, and the only way to free him, is to fill him with arrows and cannon balls.
-
-Good luck !"
+text = "TUT_12_TEXT"
 autowrap_mode = 2
 
 [node name="SoundManager" type="Node" parent="."]

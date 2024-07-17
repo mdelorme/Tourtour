@@ -64,7 +64,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_akbdj")
 theme_override_font_sizes/font_size = 18
-text = "- Programming, level design, major tweaking -"
+text = "CREDITS_TITLE_1"
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
@@ -84,7 +84,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_akbdj")
 theme_override_font_sizes/font_size = 20
-text = "- Visual Assets -"
+text = "CREDITS_TITLE_2"
 horizontal_alignment = 1
 
 [node name="Label5" type="Label" parent="MarginContainer/VBoxContainer"]
@@ -92,15 +92,16 @@ layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_akbdj")
 theme_override_font_sizes/font_size = 12
-text = "16x16 miniworld sprites by Shade and Octoshrimp (CC0)
-Heroic Assets Series icon pack by Aleksandr Makarov
-Bomb Party by Matt Hackett of Lost Decade Games (CC-BY 3.0)
-Gothicvania Town by Luis Zuno (CC0)
-Forest of Illusions by Luis Zuno (CC0)
-Fort of Illusions by Luis Zuno (CC0)
-Explosion pack 1 by Luis Zuno (CC0)
-RPG Icon pack by Kazzter
-Simple Natural Landscape by CraftPix2d.net (OGA-BY 3.0)"
+text = "16x16 miniworld sprites - Shade & Octoshrimp (CC0)
+Heroic Assets Series icon pack - Aleksandr Makarov
+Bomb Party - Matt Hackett of Lost Decade Games (CC-BY 3.0)
+Gothicvania Town - Luis Zuno (CC0)
+Forest of Illusions - Luis Zuno (CC0)
+Fort of Illusions - Luis Zuno (CC0)
+Explosion pack 1 - Luis Zuno (CC0)
+RPG Icon pack - Kazzter
+Simple Natural Landscape - CraftPix2d.net (OGA-BY 3.0)
+Flags - Jaka+"
 horizontal_alignment = 1
 
 [node name="Spacer3" type="Control" parent="MarginContainer/VBoxContainer"]
@@ -121,8 +122,8 @@ layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_akbdj")
 theme_override_font_sizes/font_size = 12
-text = "Adventurer by Brian J. Smith (CC-BY)
-Old Wizard by Angel (CC0)"
+text = "Adventurer - Brian J. Smith (CC-BY)
+Old Wizard - Angel (CC0)"
 horizontal_alignment = 1
 
 [node name="Spacer4" type="Control" parent="MarginContainer/VBoxContainer"]
@@ -135,7 +136,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_akbdj")
 theme_override_font_sizes/font_size = 20
-text = "- Sounds -"
+text = "CREDITS_TITLE_4"
 horizontal_alignment = 1
 
 [node name="Label9" type="Label" parent="MarginContainer/VBoxContainer"]
@@ -143,10 +144,10 @@ layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_akbdj")
 theme_override_font_sizes/font_size = 12
-text = "Monster grunts by Michel Baradari (CC-BY)
-RPG Sound Pack by ArtisticDude (CC0)
-Indie Friendly Sounds - RPG Sound Pack by Place Holder Assets
-700 Monsters Sounds by Game Santora"
+text = "Monster grunts - Michel Baradari (CC-BY)
+RPG Sound Pack - ArtisticDude (CC0)
+Indie Friendly Sounds - RPG Sound Pack - Place Holder Assets
+700 Monsters Sounds - Game Santora"
 horizontal_alignment = 1
 
 [node name="Spacer5" type="Control" parent="MarginContainer/VBoxContainer"]
@@ -159,7 +160,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_akbdj")
 theme_override_font_sizes/font_size = 20
-text = "- Music -"
+text = "CREDITS_TITLE_5"
 horizontal_alignment = 1
 
 [node name="Label10" type="Label" parent="MarginContainer/VBoxContainer"]
@@ -167,12 +168,12 @@ layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_akbdj")
 theme_override_font_sizes/font_size = 12
-text = "Medieval: Exploration by RandomMind (CC0)
-Medieval: Harvest Season by RandomMind (CC0)
-Medieval: Minstrel Dance by RandomMind (CC0)
-Medieval: Battle by RandomMind (CC0)
-Spirit of  Valley by Tausdei (CC-BY 4.0)
-Game Over by Umplix (CC0)"
+text = "Medieval: Exploration - RandomMind (CC0)
+Medieval: Harvest Season - RandomMind (CC0)
+Medieval: Minstrel Dance - RandomMind (CC0)
+Medieval: Battle - RandomMind (CC0)
+Spirit of  Valley - Tausdei (CC-BY 4.0)
+Game Over - Umplix (CC0)"
 horizontal_alignment = 1
 
 [node name="Spacer6" type="Control" parent="MarginContainer/VBoxContainer"]
@@ -185,7 +186,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_fonts/font = ExtResource("2_akbdj")
 theme_override_font_sizes/font_size = 20
-text = "- Play testers -"
+text = "CREDITS_TITLE_6"
 horizontal_alignment = 1
 
 [node name="Label11" type="Label" parent="MarginContainer/VBoxContainer"]
@@ -221,4 +222,4 @@ theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 9
 theme_override_fonts/font = ExtResource("2_akbdj")
 theme_override_font_sizes/font_size = 44
-text = "Thank you for playing"
+text = "THANKS"

@@ -14,7 +14,7 @@ var cooldown := 0.0
 var state : NotifState
 
 func make_monster_notif(monster_name: String, icon: Texture2D) -> void:
-	text = '%s encountered' % monster_name
+	text = tr(monster_name) + ' ' + tr('NOTIFICATION_ENCOUNTERED') 
 	image = icon
 	
 func _ready() -> void:

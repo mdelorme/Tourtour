@@ -105,8 +105,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("1_xojsr")
 theme_override_font_sizes/font_size = 34
-text = "The monsters have 
-conquered the country"
+text = "GAME_OVER_TXT"
 horizontal_alignment = 1
 
 [node name="RetryButton" type="Button" parent="MarginContainer/Panel"]
@@ -121,8 +120,7 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_otkrf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_kpmkc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vrs4k")
-text = "Retry
-"
+text = "UI_RETRY"
 
 [node name="BackToMenuButton" type="Button" parent="MarginContainer/Panel"]
 layout_mode = 0
@@ -136,7 +134,7 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_otkrf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_kpmkc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_vrs4k")
-text = "Back to main menu"
+text = "UI_BACK_TO_MENU"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ikvvn")

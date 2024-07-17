@@ -13,12 +13,20 @@ var active := false
 var mouse_on_label := false
 	
 func _ready() -> void:
+	get_tree().paused = false
 	nlabels = len(labels)
+	active = true
 	transition_in()
 	
 	if Progress.game_just_started:
 		Progress.load()
 		Progress.game_just_started = false
+		
+	var locale := TranslationServer.get_locale().substr(0,2)
+	if locale == 'en':
+		$Locale_EN.button_pressed = true
+	elif locale == 'fr':
+		$Locale_FR.button_pressed = true
 	
 func activate() -> void:
 	active = true
@@ -26,6 +34,8 @@ func activate() -> void:
 func _process(delta: float) -> void:
 	# Lazy shit
 	$Label.modulate = $MarginContainer.modulate
+	$Locale_EN.modulate = $MarginContainer.modulate
+	$Locale_FR.modulate = $MarginContainer.modulate
 	
 	if not active:
 		return
@@ -121,3 +131,6 @@ func quit() -> void:
 
 func _on_level_chosen() -> void:
 	queue_free()
+	
+func change_locale(locale: String) -> void:
+	TranslationServer.set_locale(locale)

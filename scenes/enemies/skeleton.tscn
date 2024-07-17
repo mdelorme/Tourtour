@@ -6,7 +6,7 @@
 
 [node name="Enemy" instance=ExtResource("1_0id24")]
 icon = ExtResource("2_bak3l")
-monster_name = "Skeleton"
+monster_name = "MONSTER_SKELETON"
 life = 200
 speed = 80.0
 frames = ExtResource("3_stfas")

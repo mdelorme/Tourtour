@@ -106,7 +106,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.866667, 0.811765, 0, 1)
 theme_override_fonts/font = ExtResource("1_5jw5n")
 theme_override_font_sizes/font_size = 44
-text = "Pause"
+text = "PAUSE_TITLE"
 horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
@@ -122,8 +122,7 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_u64tl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bcri7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1wavt")
-text = "Return to game
-"
+text = "PAUSE_RETURN"
 
 [node name="RestartButton" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
@@ -134,8 +133,7 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_u64tl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bcri7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1wavt")
-text = "Restart level
-"
+text = "PAUSE_RESTART"
 
 [node name="CodexButton" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
@@ -146,7 +144,7 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_u64tl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bcri7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1wavt")
-text = "Codex"
+text = "PAUSE_CODEX"
 
 [node name="OptionsButton" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
@@ -157,8 +155,7 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_u64tl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bcri7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1wavt")
-text = "Options
-"
+text = "PAUSE_OPTIONS"
 
 [node name="BackToMenuButton" type="Button" parent="MarginContainer/Panel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
@@ -169,7 +166,7 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_u64tl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bcri7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1wavt")
-text = "Abandon"
+text = "PAUSE_ABANDON"
 
 [connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]
 [connection signal="pressed" from="MarginContainer/Panel/MarginContainer/VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]

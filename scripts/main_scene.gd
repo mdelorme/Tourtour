@@ -96,13 +96,13 @@ func _ready() -> void:
 	# Filling out info labels
 	var get_fire_rate_indicator := func(fire_rate: float) -> String:
 		if fire_rate == 0.0:
-			return 'Instant'
+			return tr('FIRE_INSTANT')
 		elif fire_rate < 1.0:
-			return 'Fast'
+			return tr('FIRE_FAST')
 		elif fire_rate < 4.0:
-			return 'Slow'
+			return tr('FIRE_SLOW')
 		else:
-			return 'Very slow'
+			return tr('FIRE_VERY_SLOW')
 			
 	var label: Label
 	# Archers

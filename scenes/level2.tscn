@@ -1097,7 +1097,7 @@ position = Vector2(297, 328)
 line_point = 12
 
 [node name="Line" parent="MainScene/Burrows/Burrow" index="0"]
-modulate = Color(0.803374, 0.5, 0.5, 1)
+modulate = Color(0.96671, 0.5, 0.5, 1)
 points = PackedVector2Array(-65, -64, -65, -111)
 
 [node name="Entrance" parent="MainScene/Burrows/Burrow" index="1"]
@@ -1111,7 +1111,7 @@ position = Vector2(297, 328)
 line_point = 20
 
 [node name="Line" parent="MainScene/Burrows/Burrow2" index="0"]
-modulate = Color(0.803374, 0.5, 0.5, 1)
+modulate = Color(0.96671, 0.5, 0.5, 1)
 points = PackedVector2Array(0, -111, 0, -144)
 
 [node name="Entrance" parent="MainScene/Burrows/Burrow2" index="1"]
@@ -1202,7 +1202,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("29_m2mru")
 theme_override_font_sizes/font_size = 22
-text = "Towers:"
+text = "UI_TOWERS"
 script = ExtResource("31_rtkbj")
 
 [node name="ArcherTowerButton" type="TextureButton" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
@@ -1249,13 +1249,6 @@ theme_override_constants/separation = 10
 [node name="Control" type="Control" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("29_m2mru")
-theme_override_font_sizes/font_size = 22
-text = "Progress"
-vertical_alignment = 1
-
 [node name="WaveProgressBar" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("50_0lacm")]
 layout_mode = 2
 step = 0.0
@@ -1265,7 +1258,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("29_m2mru")
 theme_override_font_sizes/font_size = 22
-text = "Next"
+text = "UI_NEXT"
 vertical_alignment = 1
 
 [node name="NextWaveIndicator" type="TextureRect" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
@@ -1307,7 +1300,7 @@ custom_minimum_size = Vector2(55, 0)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("29_m2mru")
 bbcode_enabled = true
-text = "[color='#60bc4d']A[/color]rchers"
+text = "DESC_ARCHERS"
 scroll_active = false
 autowrap_mode = 0
 text_direction = 1
@@ -1404,7 +1397,7 @@ custom_minimum_size = Vector2(55, 0)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("29_m2mru")
 bbcode_enabled = true
-text = "[color='#4d7cbc']M[/color]ages"
+text = "DESC_MAGES"
 scroll_active = false
 autowrap_mode = 0
 text_direction = 1
@@ -1475,7 +1468,7 @@ stretch_mode = 2
 [node name="MageBonusLabel" type="Label" parent="CanvasLayer/MagesDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer5"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("29_m2mru")
-text = "Freezes"
+text = "DESC_FREEZE"
 vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/MagesDescriptionPanel/MarginContainer/VBoxContainer"]
@@ -1729,8 +1722,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("55_thyff")
 theme_override_font_sizes/font_size = 44
-text = "Level 2
-The Woods"
+text = "LVL2_TITLE"
 horizontal_alignment = 1
 
 [node name="Opacifier" type="ColorRect" parent="CanvasLayer"]
@@ -1789,16 +1781,14 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("55_thyff")
 theme_override_font_sizes/font_size = 36
-text = "Victory !"
+text = "VICTORY_TITLE"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="CanvasLayer/VictoryPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("55_thyff")
 theme_override_font_sizes/font_size = 20
-text = "You have liberated the red dragon !
-You are getting closer to the root of all evil
-The dark army awaits you in the cemetary"
+text = "LVL2_VICTORY"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VictoryPanel/MarginContainer/VBoxContainer"]
@@ -1815,8 +1805,7 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_huix3")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2rmg6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_111s4")
-text = "Go to the cemetary
-"
+text = "LVL2_VICTORY_BUTTON"
 
 [node name="DebugPanel" type="PanelContainer" parent="CanvasLayer"]
 visible = false
@@ -1900,6 +1889,7 @@ offset_left = 7.0
 offset_top = 396.0
 offset_right = 251.0
 offset_bottom = 420.0
+text = "TUT_HIDE"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Tutorials/00_mage_tower"]
 layout_mode = 0
@@ -1909,9 +1899,7 @@ offset_right = 362.0
 offset_bottom = 245.0
 theme_override_fonts/normal_font = ExtResource("55_thyff")
 theme_override_font_sizes/normal_font_size = 22
-text = "For this level, you don't have the cannon tower, but now you can use the Mage tower.
-
-Mage towers cost 75 gold coins and fire more slowly than archer towers. However, they also slow down enemies, and deal damage on an area."
+text = "TUT_13_TEXT"
 
 [node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/00_mage_tower"]
 points = PackedVector2Array(92, 474, 131, 424)
@@ -1938,7 +1926,7 @@ offset_top = 47.0
 offset_right = 402.0
 offset_bottom = 433.0
 trigger_type = 1
-encounter_name = "Wendigo"
+encounter_name = "MONSTER_WENDIGO"
 unique_id = "01_wendigo"
 
 [node name="Button" parent="CanvasLayer/Tutorials/01_wendigo_tutorial" index="0"]
@@ -1952,6 +1940,7 @@ offset_left = 7.0
 offset_top = 396.0
 offset_right = 251.0
 offset_bottom = 420.0
+text = "TUT_HIDE"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Tutorials/01_wendigo_tutorial"]
 layout_mode = 0
@@ -1961,17 +1950,7 @@ offset_right = 362.0
 offset_bottom = 381.0
 theme_override_fonts/normal_font = ExtResource("55_thyff")
 theme_override_font_sizes/normal_font_size = 22
-text = "Wendigos have the ability to enter burrows and exit them without going all the way around.
-
-
-
-
-
-
-
-
-
-Oh, by the way. This will be the last tutorial on an enemy for this level ! You will have to find out the rest by yourself."
+text = "TUT_14_TEXT"
 
 [node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/01_wendigo_tutorial"]
 points = PackedVector2Array(92, 474, 131, 424)

@@ -674,7 +674,6 @@ cannon_tower_enabled = true
 cur_level = 3
 starting_gold = 275
 starting_life = 10
-debug_level = true
 
 [node name="MainScene" type="Node2D" parent="."]
 position = Vector2(0, 32)
@@ -711,7 +710,7 @@ position = Vector2(167, 265)
 line_point = 4
 
 [node name="Line" parent="MainScene/Burrows/Burrow" index="0"]
-modulate = Color(0.883798, 0.5, 0.5, 1)
+modulate = Color(0.998193, 0.5, 0.5, 1)
 points = PackedVector2Array(0, 0, 0, -145)
 
 [node name="Exit" parent="MainScene/Burrows/Burrow" index="2"]
@@ -819,7 +818,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("29_fgbk5")
 theme_override_font_sizes/font_size = 22
-text = "Towers:"
+text = "UI_TOWERS"
 script = ExtResource("31_4mq1g")
 
 [node name="ArcherTowerButton" type="TextureButton" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer"]
@@ -886,13 +885,6 @@ theme_override_constants/separation = 10
 [node name="Control" type="Control" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("29_fgbk5")
-theme_override_font_sizes/font_size = 22
-text = "Progress"
-vertical_alignment = 1
-
 [node name="WaveProgressBar" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2" instance=ExtResource("54_c2nnr")]
 layout_mode = 2
 step = 0.0
@@ -902,7 +894,7 @@ unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("29_fgbk5")
 theme_override_font_sizes/font_size = 22
-text = "Next"
+text = "UI_NEXT"
 vertical_alignment = 1
 
 [node name="NextWaveIndicator" type="TextureRect" parent="CanvasLayer/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer2"]
@@ -944,7 +936,7 @@ custom_minimum_size = Vector2(55, 0)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("29_fgbk5")
 bbcode_enabled = true
-text = "[color='#60bc4d']A[/color]rchers"
+text = "DESC_ARCHERS"
 scroll_active = false
 autowrap_mode = 0
 text_direction = 1
@@ -1041,7 +1033,7 @@ custom_minimum_size = Vector2(55, 0)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("29_fgbk5")
 bbcode_enabled = true
-text = "[color='#4d7cbc']M[/color]ages"
+text = "DESC_MAGES"
 scroll_active = false
 autowrap_mode = 0
 text_direction = 1
@@ -1112,7 +1104,7 @@ stretch_mode = 2
 [node name="MageBonusLabel" type="Label" parent="CanvasLayer/MagesDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer5"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("29_fgbk5")
-text = "Freezes"
+text = "DESC_FREEZE"
 vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/MagesDescriptionPanel/MarginContainer/VBoxContainer"]
@@ -1154,7 +1146,7 @@ custom_minimum_size = Vector2(55, 0)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("29_fgbk5")
 bbcode_enabled = true
-text = "[color='#7861d3']D[/color]ruids"
+text = "DESC_DRUIDS"
 scroll_active = false
 autowrap_mode = 0
 text_direction = 1
@@ -1225,7 +1217,7 @@ stretch_mode = 2
 [node name="DruidBonusLabel" type="Label" parent="CanvasLayer/DruidsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer5"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("29_fgbk5")
-text = "Chains"
+text = "DESC_CHAINS"
 vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/DruidsDescriptionPanel/MarginContainer/VBoxContainer"]
@@ -1267,7 +1259,7 @@ custom_minimum_size = Vector2(55, 0)
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("29_fgbk5")
 bbcode_enabled = true
-text = "[color='#c15b61']C[/color]annons"
+text = "DESC_CANNONS"
 scroll_active = false
 autowrap_mode = 0
 text_direction = 1
@@ -1338,7 +1330,7 @@ stretch_mode = 2
 [node name="CannonsBonusLabel" type="Label" parent="CanvasLayer/CannonsDescriptionPanel/MarginContainer/VBoxContainer/HBoxContainer5"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("29_fgbk5")
-text = "Area dmg"
+text = "DESC_AREA"
 vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/CannonsDescriptionPanel/MarginContainer/VBoxContainer"]
@@ -1393,8 +1385,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("55_3hplg")
 theme_override_font_sizes/font_size = 44
-text = "Level 3
-The Cursed Graveyard"
+text = "LVL3_TITLE"
 horizontal_alignment = 1
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("61_aecs5")]
@@ -1441,15 +1432,14 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("55_3hplg")
 theme_override_font_sizes/font_size = 36
-text = "Victory !"
+text = "VICTORY_TITLE"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="CanvasLayer/VictoryPanel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("55_3hplg")
 theme_override_font_sizes/font_size = 20
-text = "All three protectors of the land have been freed !
-The final forces of evil have been defeated !"
+text = "LVL3_VICTORY"
 horizontal_alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VictoryPanel/MarginContainer/VBoxContainer"]
@@ -1467,8 +1457,7 @@ theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_nn4x2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jkdqg")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_he81e")
-text = "Close the portal
-"
+text = "LVL3_VICTORY_BUTTON"
 
 [node name="Opacifier" type="ColorRect" parent="CanvasLayer"]
 unique_name_in_owner = true
@@ -1544,24 +1533,25 @@ offset_bottom = 40.0
 visible = false
 z_as_relative = false
 layout_mode = 1
-offset_left = 62.0
-offset_top = 43.0
-offset_right = 402.0
-offset_bottom = 325.0
+offset_left = 49.0
+offset_top = 90.0
+offset_right = 389.0
+offset_bottom = 407.0
 encounter_name = ""
 unique_id = "00_undead"
 
 [node name="Button" parent="CanvasLayer/Tutorials/00_undead" index="0"]
 offset_left = 338.0
-offset_top = 280.0
+offset_top = 317.0
 offset_right = 369.0
-offset_bottom = 311.0
+offset_bottom = 348.0
 
 [node name="CheckBox" parent="CanvasLayer/Tutorials/00_undead" index="1"]
 offset_left = 7.0
-offset_top = 291.0
+offset_top = 328.0
 offset_right = 251.0
-offset_bottom = 315.0
+offset_bottom = 352.0
+text = "TUT_HIDE"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Tutorials/00_undead"]
 layout_mode = 0
@@ -1571,46 +1561,42 @@ offset_right = 358.0
 offset_bottom = 274.0
 theme_override_fonts/normal_font = ExtResource("55_3hplg")
 theme_override_font_sizes/normal_font_size = 22
-text = "In this level, you will face, among other things, armies of undead enemies. Undead are immune to material damage and can only be damaged by magic attacks."
+text = "TUT_15_TEXT"
 
 [node name="VideoStreamPlayer2" type="VideoStreamPlayer" parent="CanvasLayer/Tutorials/00_undead/RichTextLabel"]
 layout_mode = 0
-offset_left = 102.0
-offset_top = 115.0
-offset_right = 270.0
-offset_bottom = 265.0
+offset_left = 95.0
+offset_top = 175.0
+offset_right = 263.0
+offset_bottom = 325.0
 stream = ExtResource("74_m0rr8")
 autoplay = true
 expand = true
 loop = true
 
-[node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/00_undead"]
-points = PackedVector2Array(171, 397, 177, 321)
-width = 4.0
-default_color = Color(0.976471, 0.886275, 0.513726, 1)
-
 [node name="01_druid_tower" parent="CanvasLayer/Tutorials" instance=ExtResource("73_24nha")]
 visible = false
 z_as_relative = false
 layout_mode = 1
-offset_left = 62.0
-offset_top = 43.0
-offset_right = 402.0
-offset_bottom = 386.0
+offset_left = 56.0
+offset_top = 11.0
+offset_right = 396.0
+offset_bottom = 391.0
 encounter_name = ""
 unique_id = "01_druid_tower"
 
 [node name="Button" parent="CanvasLayer/Tutorials/01_druid_tower" index="0"]
 offset_left = 337.0
-offset_top = 341.0
+offset_top = 372.0
 offset_right = 368.0
-offset_bottom = 372.0
+offset_bottom = 403.0
 
 [node name="CheckBox" parent="CanvasLayer/Tutorials/01_druid_tower" index="1"]
 offset_left = 7.0
-offset_top = 354.0
+offset_top = 385.0
 offset_right = 251.0
-offset_bottom = 378.0
+offset_bottom = 409.0
+text = "TUT_HIDE"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Tutorials/01_druid_tower"]
 layout_mode = 0
@@ -1620,19 +1606,20 @@ offset_right = 358.0
 offset_bottom = 274.0
 theme_override_fonts/normal_font = ExtResource("55_3hplg")
 theme_override_font_sizes/normal_font_size = 22
-text = "Fortunately, your best druids have come to help ! They can channel natural energy to blast off enemies. They do little damage but can damage undead. Their firing range is infinite, and they will target multiple enemies !"
+text = "TUT_16_TEXT"
 
 [node name="Line2D" type="Line2D" parent="CanvasLayer/Tutorials/01_druid_tower"]
-points = PackedVector2Array(134, 480, 186, 381)
+position = Vector2(0, 38)
+points = PackedVector2Array(120, 481, 186, 381)
 width = 4.0
 default_color = Color(0.976471, 0.886275, 0.513726, 1)
 
 [node name="VideoStreamPlayer2" type="VideoStreamPlayer" parent="CanvasLayer/Tutorials/01_druid_tower"]
 layout_mode = 0
 offset_left = 114.0
-offset_top = 195.0
+offset_top = 228.0
 offset_right = 282.0
-offset_bottom = 345.0
+offset_bottom = 378.0
 stream = ExtResource("75_i4td0")
 autoplay = true
 expand = true

@@ -279,51 +279,51 @@ func check_progress() -> void:
 	# Updates progress if we've never encountered this monster
 	var never_seen : bool = false
 	match monster_name:
-		'Goblin':
+		'MONSTER_GOBLIN':
 			if not Progress.goblin_encountered:
 				never_seen = true
 				Progress.goblin_encountered = true
-		'Orc':
+		'MONSTER_ORC':
 			if not Progress.orc_encountered:
 				never_seen = true
 				Progress.orc_encountered = true
-		'Orc Shaman':
+		'MONSTER_ORC_SHAMAN':
 			if not Progress.orc_shaman_encountered:
 				never_seen = true
 				Progress.orc_shaman_encountered = true
-		'Green Dragon':
+		'MONSTER_GREEN_DRAGON':
 			if not Progress.green_dragon_encountered:
 				never_seen = true
 				Progress.green_dragon_encountered = true
-		'Red Demon':
+		'MONSTER_RED_DEMON':
 			if not Progress.red_demon_encountered:
 				never_seen = true
 				Progress.red_demon_encountered = true
-		'Minotaur':
+		'MONSTER_MINOTAUR':
 			if not Progress.minotaur_encountered:
 				never_seen = true
 				Progress.minotaur_encountered = true
-		'Wendigo':
+		'MONSTER_WENDIGO':
 			if not Progress.wendigo_encountered:
 				never_seen = true
 				Progress.wendigo_encountered = true
-		'Red Dragon':
+		'MONSTER_RED_DRAGON':
 			if not Progress.red_dragon_encountered:
 				never_seen = true
 				Progress.red_dragon_encountered = true
-		'Skeleton':
+		'MONSTER_SKELETON':
 			if not Progress.skeleton_encountered:
 				never_seen = true
 				Progress.skeleton_encountered = true
-		'Ghost Warrior':
+		'MONSTER_GHOST_WARRIOR':
 			if not Progress.ghost_warrior_encountered:
 				never_seen = true
 				Progress.ghost_warrior_encountered = true
-		'Necromancer':
+		'MONSTER_NECROMANCER':
 			if not Progress.necromancer_encountered:
 				never_seen = true
 				Progress.necromancer_encountered = true
-		'Black Dragon':
+		'MONSTER_BLACK_DRAGON':
 			if not Progress.black_dragon_encountered:
 				never_seen = true
 				Progress.black_dragon_encountered = true

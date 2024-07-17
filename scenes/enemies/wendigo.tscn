@@ -6,7 +6,7 @@
 
 [node name="Enemy" instance=ExtResource("1_u8ife")]
 icon = ExtResource("2_augox")
-monster_name = "Wendigo"
+monster_name = "MONSTER_WENDIGO"
 life = 4500
 speed = 60.0
 frames = ExtResource("3_qq04o")
@@ -16,4 +16,3 @@ dying_sound = 5
 
 [node name="Area2D" parent="." index="1"]
 collision_layer = 3
-collision_mask = 0
